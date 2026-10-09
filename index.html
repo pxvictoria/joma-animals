@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joma Animals — Productos seleccionados con mucho mimo</title>
+    <meta name="description" content="Joma Animals: tienda de productos para mascotas, seleccionados con mimo.">
+    <script>document.documentElement.classList.add('js');</script>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='20' cy='35' r='11' fill='%23653044'/%3E%3Ccircle cx='40' cy='16' r='12' fill='%23653044'/%3E%3Ccircle cx='62' cy='16' r='12' fill='%23653044'/%3E%3Ccircle cx='82' cy='35' r='11' fill='%23653044'/%3E%3Cellipse cx='51' cy='64' rx='32' ry='27' fill='%23653044'/%3E%3C/svg%3E" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Saltar al contenido</a>
+
+    <!-- ============ TOPBAR ============ -->
+    <div class="topbar">
+        <div class="topbar__container container">
+            <p class="topbar__message"><span class="topbar__icon" aria-hidden="true">✦</span> Productos seleccionados con mucho mimo</p>
+            <p class="topbar__hours">
+                L–V 9:30–13:00 · 16:30–20:00
+                <span class="topbar__divider" aria-hidden="true"></span>
+                Sáb 9:30–13:00
+            </p>
+        </div>
+    </div>
+
+    <!-- ============ NAVBAR ============ -->
+    <header class="navbar" id="navbar">
+        <div class="navbar__container container">
+            <a href="#home" class="navbar__logo" aria-label="Joma Animals — inicio" data-cursor="link">
+                <img src="assets/Logo-Joma-navbar.png" alt="Joma Animals" class="navbar__logo-img" width="1651" height="271">
+            </a>
+
+            <div class="navbar__right">
+                <nav class="navbar__menu" aria-label="Navegación principal">
+                    <a href="#home" class="navbar__link">Inicio</a>
+                    <a href="#catalogo" class="navbar__link">Tienda</a>
+                </nav>
+
+                <div class="navbar__search" role="search">
+                    <svg class="navbar__search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                    <label for="navSearch" class="sr-only">Buscar productos</label>
+                    <input type="search" id="navSearch" name="buscar" placeholder="Buscar productos...">
+                </div>
+
+                <button type="button" class="navbar__cart" aria-label="Abrir carrito" data-cursor="link">
+                    <svg class="navbar__cart-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                    <span class="navbar__cart-label">Carrito</span>
+                    <span class="navbar__cart-badge" aria-hidden="true">0</span>
+                </button>
+
+                <button class="navbar__toggle" aria-label="Abrir menú" aria-expanded="false">
+                    <span class="navbar__toggle-icon"></span>
+                </button>
+            </div>
+        </div>
+
+        <div class="navbar__mobile-menu">
+            <div class="navbar__search" role="search">
+                <svg class="navbar__search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                <label for="navSearchMobile" class="sr-only">Buscar productos</label>
+                <input type="search" id="navSearchMobile" name="buscar" placeholder="Buscar productos...">
+            </div>
+            <nav aria-label="Navegación móvil">
+                <a href="#home" class="navbar__link">Inicio</a>
+                <a href="#catalogo" class="navbar__link">Tienda</a>
+            </nav>
+            <button type="button" class="navbar__cart" aria-label="Abrir carrito">
+                <svg class="navbar__cart-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                <span class="navbar__cart-label">Carrito</span>
+                <span class="navbar__cart-badge" aria-hidden="true">0</span>
+            </button>
+        </div>
+    </header>
+
+    <main id="main">
+        <!-- ============ 1. HERO ============ -->
+        <section class="hero" id="home">
+            <div class="hero__texture" aria-hidden="true"></div>
+            <div class="container hero__inner">
+                <div class="hero__content">
+                    <p class="badge-pill hero__badge">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 1 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78Z"/></svg>
+                        Bienestar que se nota
+                    </p>
+                    <h1 class="hero__title">Más felices,<br><span class="hero__title-accent">más animales.</span></h1>
+                    <p class="hero__subtitle">Productos naturales, bonitos y buenos para cuidar de quienes llenan tu casa de pelos y alegría.</p>
+                    <div class="hero__actions">
+                        <a href="#tienda" class="btn btn--primary" data-cursor="link">
+                            Ver la tienda
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                        </a>
+                        <a href="#conocenos" class="link-arrow" data-cursor="link">
+                            Conócenos
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7l10 10M17 8v9H8"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero__media">
+                    <img src="assets/Imgen-Hero.png" alt="Perro golden retriever y gato atigrado descansando juntos sobre una alfombra" width="1075" height="1200" loading="eager" fetchpriority="high" decoding="async">
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ 2. CATEGORÍAS ============ -->
+        <section class="categories" id="tienda">
+            <div class="container">
+                <p class="badge-pill categories__badge">Todo para ellos</p>
+                <h2 class="section-title categories__title">¿Qué necesita tu compañero?</h2>
+                <div class="categories__grid">
+                    <a href="#" class="cat-card cat-card--salmon" data-cursor="link">
+                        <img class="cat-card__img cat-card__img--raise" src="assets/paseo.png" alt="Cachorro con arnés listo para pasear" loading="lazy" decoding="async">
+                        <div class="cat-card__footer">
+                            <span class="cat-card__label">Paseo</span>
+                            <span class="cat-card__arrow" aria-hidden="true">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                            </span>
+                        </div>
+                    </a>
+                    <a href="#" class="cat-card cat-card--blue" data-cursor="link">
+                        <img class="cat-card__img cat-card__img--raise" src="assets/en casa.png" alt="Gato durmiendo en una cama mullida" loading="lazy" decoding="async">
+                        <div class="cat-card__footer">
+                            <span class="cat-card__label">En Casa</span>
+                            <span class="cat-card__arrow" aria-hidden="true">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                            </span>
+                        </div>
+                    </a>
+                    <a href="#" class="cat-card cat-card--yellow" data-cursor="link">
+                        <img class="cat-card__img" src="assets/juguetes.png" alt="Set de juguetes para mascotas: pulpo, pelota, cuerda y hueso" loading="lazy" decoding="async">
+                        <div class="cat-card__footer">
+                            <span class="cat-card__label">Juguetes</span>
+                            <span class="cat-card__arrow" aria-hidden="true">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                            </span>
+                        </div>
+                    </a>
+                    <a href="#" class="cat-card cat-card--green" data-cursor="link">
+                        <img class="cat-card__img" src="assets/cuidado.png" alt="Set de cuidado: cepillo, peine y cortaúñas" loading="lazy" decoding="async">
+                        <div class="cat-card__footer">
+                            <span class="cat-card__label">Cuidado</span>
+                            <span class="cat-card__arrow" aria-hidden="true">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                            </span>
+                        </div>
+                    </a>
+                    <a href="#" class="cat-card cat-card--lilac" data-cursor="link">
+                        <img class="cat-card__img cat-card__img--raise" src="assets/alimentacion.png" alt="Tazón con comida para mascotas" loading="lazy" decoding="async">
+                        <div class="cat-card__footer">
+                            <span class="cat-card__label">Alimentación</span>
+                            <span class="cat-card__arrow" aria-hidden="true">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ 3. VITRINA DE LA TIENDA ============ -->
+        <section class="catalog-teaser">
+            <div class="catalog-teaser__dots" aria-hidden="true"></div>
+            <div class="container catalog-teaser__inner">
+                <p class="badge-pill badge-pill--wine catalog-teaser__badge">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l1-5h16l1 5"/><path d="M3 9a2 2 0 0 0 4 0 2 2 0 0 0 4 0 2 2 0 0 0 4 0 2 2 0 0 0 4 0"/><path d="M4 9v10h16V9"/><path d="M9 21v-6h6v6"/></svg>
+                    La tienda
+                </p>
+                <h2 class="catalog-teaser__title">
+                    Pequeñas cosas para
+                    <span class="catalog-teaser__title-line">grandes compañeros</span>
+                </h2>
+                <p class="catalog-teaser__subtitle">Esta es una sección de muestra para imaginar cómo se verá el catálogo</p>
+            </div>
+        </section>
+
+        <!-- ============ 4. TIENDA ============ -->
+        <section class="shop" id="catalogo">
+            <div class="container shop__layout">
+                <aside class="shop__sidebar">
+                    <div class="shop__search" role="search">
+                        <svg class="shop__search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                        <label for="shopSearch" class="sr-only">Buscar producto</label>
+                        <input type="search" id="shopSearch" name="buscar" placeholder="Buscar producto">
+                    </div>
+
+                    <div class="shop__filter-group">
+                        <h3 class="shop__filter-title">Categorías</h3>
+                        <label class="shop__checkbox"><input type="checkbox" name="categoria" value="paseo"> Paseo</label>
+                        <label class="shop__checkbox"><input type="checkbox" name="categoria" value="en-casa"> En casa</label>
+                        <label class="shop__checkbox"><input type="checkbox" name="categoria" value="juguetes"> Juguetes</label>
+                        <label class="shop__checkbox"><input type="checkbox" name="categoria" value="cuidado"> Cuidado</label>
+                        <label class="shop__checkbox"><input type="checkbox" name="categoria" value="alimentacion"> Alimentación</label>
+                    </div>
+
+                    <div class="shop__filter-group">
+                        <h3 class="shop__filter-title">Para quién</h3>
+                        <label class="shop__checkbox"><input type="checkbox" name="para-quien" value="perros"> Perros</label>
+                        <label class="shop__checkbox"><input type="checkbox" name="para-quien" value="gatos"> Gatos</label>
+                        <label class="shop__checkbox"><input type="checkbox" name="para-quien" value="otros"> Otros</label>
+                    </div>
+
+                    <label class="shop__checkbox shop__checkbox--standalone"><input type="checkbox" name="ofertas" value="si"> Solo ofertas</label>
+
+                    <button class="btn btn--primary shop__clear" type="button" id="clearFiltersBtn">Limpiar filtros</button>
+                </aside>
+
+                <div class="shop__grid">
+                    <article class="product-card" data-id="pienso" data-name="Pienso 3kg" data-category="Alimentación" data-subtitle="Cuidado digestivo" data-price="22.00" data-image="assets/pienso.png" data-media="product-card__media--lilac">
+                        <div class="product-card__media product-card__media--lilac">
+                            <img src="assets/pienso.png" alt="Bolsa de pienso para perros de 3kg" loading="lazy" decoding="async">
+                        </div>
+                        <div class="product-card__body">
+                            <p class="product-card__eyebrow">Alimentación</p>
+                            <h3 class="product-card__name">Pienso 3kg</h3>
+                            <div class="product-card__footer">
+                                <p class="product-card__price">22,00&nbsp;€</p>
+                                <button class="product-card__add" aria-label="Agregar Pienso 3kg al carrito" data-cursor="link">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card" data-id="champu" data-name="Champú piel sensible" data-category="Cuidado" data-subtitle="Fórmula suave" data-price="7.50" data-image="assets/champu.png" data-media="product-card__media--green">
+                        <div class="product-card__media product-card__media--green">
+                            <span class="product-card__tag">Oferta</span>
+                            <img src="assets/champu.png" alt="Champú para perros Woof & Wash, piel sensible" loading="lazy" decoding="async">
+                        </div>
+                        <div class="product-card__body">
+                            <p class="product-card__eyebrow">Cuidado</p>
+                            <h3 class="product-card__name">Champú piel sensible</h3>
+                            <div class="product-card__footer">
+                                <p class="product-card__price"><span class="product-card__price-old">9,50&nbsp;€</span>7,50&nbsp;€</p>
+                                <button class="product-card__add" aria-label="Agregar Champú piel sensible al carrito" data-cursor="link">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card" data-id="mordedor-nube" data-name="Mordedor nube" data-category="Juguetes" data-subtitle="Superresistente" data-price="9.90" data-image="assets/mordedor.png" data-media="product-card__media--yellow">
+                        <div class="product-card__media product-card__media--yellow">
+                            <img src="assets/mordedor.png" alt="Cachorro golden mordiendo un juguete mordedor" loading="lazy" decoding="async">
+                        </div>
+                        <div class="product-card__body">
+                            <p class="product-card__eyebrow">Juguetes</p>
+                            <h3 class="product-card__name">Mordedor nube</h3>
+                            <div class="product-card__footer">
+                                <p class="product-card__price">9,90&nbsp;€</p>
+                                <button class="product-card__add" aria-label="Agregar Mordedor nube al carrito" data-cursor="link">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card" data-id="manta" data-name="Manta suave" data-category="En casa" data-subtitle="Extra abrigo" data-price="12.50" data-image="assets/manta.png" data-media="product-card__media--blue">
+                        <div class="product-card__media product-card__media--blue">
+                            <img src="assets/manta.png" alt="Manta suave con estampado de huellas" loading="lazy" decoding="async">
+                        </div>
+                        <div class="product-card__body">
+                            <p class="product-card__eyebrow">En casa</p>
+                            <h3 class="product-card__name">Manta suave</h3>
+                            <div class="product-card__footer">
+                                <p class="product-card__price">12,50&nbsp;€</p>
+                                <button class="product-card__add" aria-label="Agregar Manta suave al carrito" data-cursor="link">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card" data-id="arnes" data-name="Arnés" data-category="Paseo" data-subtitle="Ajuste cómodo" data-price="10.95" data-image="assets/arnes.png" data-media="product-card__media--salmon">
+                        <div class="product-card__media product-card__media--salmon">
+                            <img src="assets/arnes.png" alt="Gato paseando con arnés turquesa" loading="lazy" decoding="async">
+                        </div>
+                        <div class="product-card__body">
+                            <p class="product-card__eyebrow">Paseo</p>
+                            <h3 class="product-card__name">Arnés</h3>
+                            <div class="product-card__footer">
+                                <p class="product-card__price">10,95&nbsp;€</p>
+                                <button class="product-card__add" aria-label="Agregar Arnés al carrito" data-cursor="link">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card" data-id="balsamo" data-name="Bálsamo para patitas" data-category="Cuidado" data-subtitle="Ingredientes naturales" data-price="11.95" data-image="assets/balsamo.png" data-media="product-card__media--green">
+                        <div class="product-card__media product-card__media--green">
+                            <img src="assets/balsamo.png" alt="Bálsamo natural para patitas de mascotas" loading="lazy" decoding="async">
+                        </div>
+                        <div class="product-card__body">
+                            <p class="product-card__eyebrow">Cuidado</p>
+                            <h3 class="product-card__name">Bálsamo para patitas</h3>
+                            <div class="product-card__footer">
+                                <p class="product-card__price">11,95&nbsp;€</p>
+                                <button class="product-card__add" aria-label="Agregar Bálsamo para patitas al carrito" data-cursor="link">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ 5. BENEFICIOS ============ -->
+        <section class="benefits">
+            <div class="container">
+                <h2 class="section-title benefits__title">Bienestar para todos, <span class="benefits__title-accent">con pelo o sin él</span></h2>
+                <p class="benefits__subtitle">Todo lo que ponemos en la tienda se enfoca en la felicidad de tu compañero.</p>
+                <div class="benefits__grid">
+                    <article class="benefit-card benefit-card--green">
+                        <img class="benefit-card__img" src="assets/naturales.png" alt="Espinaca, tomate, zanahoria y avena" loading="lazy" decoding="async">
+                        <div class="benefit-card__text">
+                            <h3>Naturales</h3>
+                            <p>Ingredientes buenos, fáciles de entender.</p>
+                        </div>
+                    </article>
+                    <article class="benefit-card benefit-card--blue">
+                        <img class="benefit-card__img" src="assets/sin-granos.png" alt="Tazón con salmón, batata y arvejas" loading="lazy" decoding="async">
+                        <div class="benefit-card__text">
+                            <h3>Sin cereales</h3>
+                            <p>Opciones para peludos con la tripa delicada.</p>
+                        </div>
+                    </article>
+                    <article class="benefit-card benefit-card--salmon">
+                        <img class="benefit-card__img" src="assets/hipoalergenicos.png" alt="Pechuga de pollo y filete de pescado" loading="lazy" decoding="async">
+                        <div class="benefit-card__text">
+                            <h3>Hipoalergénicos</h3>
+                            <p>Para pieles sensibles y estómagos exigentes.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ 6. NUESTRA FORMA DE HACER ============ -->
+        <section class="about" id="conocenos">
+            <div class="container">
+                <div class="about__panel">
+                    <div class="about__media">
+                        <img src="assets/foto-nuestra-forma.jpg" alt="Perro caniche con suéter sentado en un sofá azul, junto a sus juguetes" width="832" height="1278" loading="lazy" decoding="async">
+                    </div>
+                    <div class="about__content">
+                        <p class="badge-pill badge-pill--dark about__badge">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c.3 3.6 1.1 6.1 2.4 7.6C15.7 11 18.2 11.8 22 12c-3.8.2-6.3 1-7.6 2.4C13.1 15.9 12.3 18.4 12 22c-.3-3.6-1.1-6.1-2.4-7.6C8.3 13 5.8 12.2 2 12c3.8-.2 6.3-1 7.6-2.4C10.9 8.1 11.7 5.6 12 2Z"/></svg>
+                            Nuestra forma de hacer
+                        </p>
+                        <h2 class="about__title">
+                            Elegimos lo bueno.<br>
+                            <span class="about__title-accent">Ellos ponen la alegría.</span>
+                        </h2>
+                        <p class="about__text">Nuestro objetivo es el bienestar de los peludos (y no peludos). Buscamos artículos naturales, algunos sin cereales, hipoalergénicos y, sobre todo, buenos.</p>
+                        <ul class="about__features">
+                            <li>
+                                <span class="about__feature-icon" aria-hidden="true">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10h18"/><path d="M4 10a8 4 0 0 0 16 0"/><path d="M10 16.5h4"/></svg>
+                                </span>
+                                <span class="about__feature-label">Ingredientes que entiendes</span>
+                            </li>
+                            <li>
+                                <span class="about__feature-icon" aria-hidden="true">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 1 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78Z"/></svg>
+                                </span>
+                                <span class="about__feature-label">Bienestar en cada detalle</span>
+                            </li>
+                            <li>
+                                <span class="about__feature-icon" aria-hidden="true">
+                                    <svg width="16" height="16" viewBox="0 0 100 100" fill="currentColor"><circle cx="20" cy="35" r="11"/><circle cx="40" cy="16" r="12"/><circle cx="62" cy="16" r="12"/><circle cx="82" cy="35" r="11"/><ellipse cx="51" cy="64" rx="32" ry="27"/></svg>
+                                </span>
+                                <span class="about__feature-label">Consejo cercano y honesto</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ 7. VEN A VERNOS ============ -->
+        <section class="trust">
+            <div class="container">
+                <div class="trust__panel">
+                    <div class="trust__decor" aria-hidden="true">
+                        <span class="trust__dot trust__dot--1"></span>
+                        <span class="trust__dot trust__dot--2"></span>
+                    </div>
+                    <div class="trust__content">
+                        <p class="trust__eyebrow">Ven a vernos</p>
+                        <h2 class="trust__title">Tu petshop de confianza,<br><span class="trust__title-accent">muy cerquita.</span></h2>
+                    </div>
+                    <ul class="trust__info">
+                        <li>
+                            <span class="trust__icon" aria-hidden="true">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+                            </span>
+                            <div>
+                                <p class="trust__info-title">Lunes a viernes</p>
+                                <p class="trust__info-text">9:30–13:00 / 16:30–20:00</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="trust__icon" aria-hidden="true">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+                            </span>
+                            <div>
+                                <p class="trust__info-title">Sábados</p>
+                                <p class="trust__info-text">9:30–13:00</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="trust__icon" aria-hidden="true">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v9a1 1 0 0 0 1 1h3v-6h6v6h3a1 1 0 0 0 1-1v-9"/></svg>
+                            </span>
+                            <div>
+                                <p class="trust__info-title">Passeig Sant Cosme</p>
+                                <p class="trust__info-text">Damià 7 · Sils</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============ VISTA DEL CARRITO ============
+         No es una ruta real: el sitio sigue siendo un único index.html.
+         Reemplaza el contenido de <main> (se oculta con el atributo
+         "hidden") manteniendo navbar y footer visibles, como una página.
+         Se abre/cierra con JS al hacer clic en "Carrito" del navbar.
+         El contenido de la lista y el resumen se generan dinámicamente. -->
+    <div class="cart-view" id="cartView" aria-hidden="true">
+        <div class="container cart-view__inner">
+            <div class="cart-view__main">
+                <p class="badge-pill cart-view__badge">Casi es tuyo</p>
+                <h1 class="cart-view__title">Tu carrito</h1>
+                <p class="cart-view__subtitle" id="cartSubtitle">Tu carrito está vacío.</p>
+
+                <div class="cart-view__list" id="cartList"></div>
+                <p class="cart-view__empty" id="cartEmpty">Todavía no agregaste productos. Explora la tienda y encuentra algo para tu compañero.</p>
+
+                <a href="#catalogo" class="cart-view__back" id="cartBack">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                    Seguir comprando
+                </a>
+            </div>
+
+            <aside class="cart-view__summary">
+                <div class="cart-view__summary-head">
+                    <h2>Resumen</h2>
+                    <span class="cart-view__summary-icon" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 100 100" fill="currentColor"><circle cx="20" cy="35" r="11"/><circle cx="40" cy="16" r="12"/><circle cx="62" cy="16" r="12"/><circle cx="82" cy="35" r="11"/><ellipse cx="51" cy="64" rx="32" ry="27"/></svg>
+                    </span>
+                </div>
+                <div class="cart-view__summary-row">
+                    <span>Subtotal</span>
+                    <span id="cartSubtotal">0,00&nbsp;€</span>
+                </div>
+                <div class="cart-view__summary-row">
+                    <span>Envío</span>
+                    <span>Calculado después</span>
+                </div>
+                <div class="cart-view__summary-divider"></div>
+                <div class="cart-view__summary-row cart-view__summary-row--total">
+                    <span>Total</span>
+                    <span id="cartTotal">0,00&nbsp;€</span>
+                </div>
+                <button type="button" class="btn btn--yellow cart-view__checkout">
+                    Finalizar compra
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </button>
+                <p class="cart-view__note">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 1 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78Z"/></svg>
+                    Compra segura y preparada con cariño
+                </p>
+            </aside>
+        </div>
+    </div>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+        <div class="container footer__inner">
+            <img class="footer__logo" src="assets/Logo-Joma-compacto.png" alt="Joma Animals" width="500" height="287">
+            <nav>
+                <p class="footer__col-title">Explora</p>
+                <div class="footer__links">
+                    <a href="#home" data-cursor="link">Inicio</a>
+                    <a href="#catalogo" data-cursor="link">Tienda</a>
+                </div>
+            </nav>
+            <div>
+                <p class="footer__col-title">Visítanos</p>
+                <address class="footer__address">
+                    Passeig Sant Cosme<br>
+                    Damia 7 Sils<br>
+                    Girona
+                </address>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
