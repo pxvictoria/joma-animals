@@ -18,41 +18,47 @@
     <!-- ============ TOPBAR ============ -->
     <div class="topbar">
         <div class="topbar__container container">
-            <p class="topbar__message"><span class="topbar__icon" aria-hidden="true">✦</span> Productos seleccionados con mucho mimo</p>
-            <p class="topbar__hours">
-                L–V 9:30–13:00 · 16:30–20:00
-                <span class="topbar__divider" aria-hidden="true"></span>
-                Sáb 9:30–13:00
-            </p>
+            <p class="topbar__message"><span class="topbar__icon" aria-hidden="true">✦</span> <span data-i18n="topbar.message">Productos seleccionados con mucho mimo</span></p>
+            <div class="topbar__right">
+                <p class="topbar__hours">
+                    <span data-i18n="topbar.hours1">L–V 9:30–13:00 · 16:30–20:00</span>
+                    <span class="topbar__divider" aria-hidden="true"></span>
+                    <span data-i18n="topbar.hours2">Sáb 9:30–13:00</span>
+                </p>
+                <div class="lang-switch" id="langSwitch" role="group" aria-label="Idioma / Idioma">
+                    <button type="button" class="lang-switch__btn" data-lang="es" aria-label="Castellano">ES</button>
+                    <button type="button" class="lang-switch__btn" data-lang="ca" aria-label="Català">CA</button>
+                </div>
+            </div>
         </div>
     </div>
 
     <!-- ============ NAVBAR ============ -->
     <header class="navbar" id="navbar">
         <div class="navbar__container container">
-            <a href="#home" class="navbar__logo" aria-label="Joma Animals — inicio" data-cursor="link">
+            <a href="#home" class="navbar__logo" data-i18n-aria="nav.logo.aria" aria-label="Joma Animals — inicio" data-cursor="link">
                 <img src="assets/Logo-Joma-navbar.png" alt="Joma Animals" class="navbar__logo-img" width="1651" height="271">
             </a>
 
             <div class="navbar__right">
-                <nav class="navbar__menu" aria-label="Navegación principal">
-                    <a href="#home" class="navbar__link">Inicio</a>
-                    <a href="#catalogo" class="navbar__link">Tienda</a>
+                <nav class="navbar__menu" data-i18n-aria="nav.menu.principal" aria-label="Navegación principal">
+                    <a href="#home" class="navbar__link" data-i18n="nav.inicio">Inicio</a>
+                    <a href="#catalogo" class="navbar__link" data-i18n="nav.tienda">Tienda</a>
                 </nav>
 
                 <div class="navbar__search" role="search">
                     <svg class="navbar__search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-                    <label for="navSearch" class="sr-only">Buscar productos</label>
-                    <input type="search" id="navSearch" name="buscar" placeholder="Buscar productos...">
+                    <label for="navSearch" class="sr-only" data-i18n="nav.search.sr">Buscar productos</label>
+                    <input type="search" id="navSearch" name="buscar" data-i18n-placeholder="nav.search.placeholder" placeholder="Buscar productos...">
                 </div>
 
-                <button type="button" class="navbar__cart" aria-label="Abrir carrito" data-cursor="link">
+                <button type="button" class="navbar__cart" data-i18n-aria="nav.cart.aria" aria-label="Abrir carrito" data-cursor="link">
                     <svg class="navbar__cart-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-                    <span class="navbar__cart-label">Carrito</span>
+                    <span class="navbar__cart-label" data-i18n="nav.cart.label">Carrito</span>
                     <span class="navbar__cart-badge" aria-hidden="true">0</span>
                 </button>
 
-                <button class="navbar__toggle" aria-label="Abrir menú" aria-expanded="false">
+                <button class="navbar__toggle" data-i18n-aria="nav.toggle.open" aria-label="Abrir menú" aria-expanded="false">
                     <span class="navbar__toggle-icon"></span>
                 </button>
             </div>
@@ -61,16 +67,16 @@
         <div class="navbar__mobile-menu">
             <div class="navbar__search" role="search">
                 <svg class="navbar__search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-                <label for="navSearchMobile" class="sr-only">Buscar productos</label>
-                <input type="search" id="navSearchMobile" name="buscar" placeholder="Buscar productos...">
+                <label for="navSearchMobile" class="sr-only" data-i18n="nav.search.sr">Buscar productos</label>
+                <input type="search" id="navSearchMobile" name="buscar" data-i18n-placeholder="nav.search.placeholder" placeholder="Buscar productos...">
             </div>
-            <nav aria-label="Navegación móvil">
-                <a href="#home" class="navbar__link">Inicio</a>
-                <a href="#catalogo" class="navbar__link">Tienda</a>
+            <nav aria-label="Navegación móvil" data-i18n-aria="nav.menu.movil">
+                <a href="#home" class="navbar__link" data-i18n="nav.inicio">Inicio</a>
+                <a href="#catalogo" class="navbar__link" data-i18n="nav.tienda">Tienda</a>
             </nav>
-            <button type="button" class="navbar__cart" aria-label="Abrir carrito">
+            <button type="button" class="navbar__cart" data-i18n-aria="nav.cart.aria" aria-label="Abrir carrito">
                 <svg class="navbar__cart-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-                <span class="navbar__cart-label">Carrito</span>
+                <span class="navbar__cart-label" data-i18n="nav.cart.label">Carrito</span>
                 <span class="navbar__cart-badge" aria-hidden="true">0</span>
             </button>
         </div>
@@ -84,23 +90,23 @@
                 <div class="hero__content">
                     <p class="badge-pill hero__badge">
                         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 1 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78Z"/></svg>
-                        Bienestar que se nota
+                        <span data-i18n="hero.badge">Bienestar que se nota</span>
                     </p>
-                    <h1 class="hero__title">Más felices,<br><span class="hero__title-accent">más animales.</span></h1>
-                    <p class="hero__subtitle">Productos naturales, bonitos y buenos para cuidar de quienes llenan tu casa de pelos y alegría.</p>
+                    <h1 class="hero__title"><span data-i18n="hero.title1">Más felices,</span><br><span class="hero__title-accent" data-i18n="hero.title2">más animales.</span></h1>
+                    <p class="hero__subtitle" data-i18n="hero.subtitle">Productos naturales, bonitos y buenos para cuidar de quienes llenan tu casa de pelos y alegría.</p>
                     <div class="hero__actions">
                         <a href="#tienda" class="btn btn--primary" data-cursor="link">
-                            Ver la tienda
+                            <span data-i18n="hero.cta.shop">Ver la tienda</span>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
                         </a>
                         <a href="#conocenos" class="link-arrow" data-cursor="link">
-                            Conócenos
+                            <span data-i18n="hero.cta.about">Conócenos</span>
                             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7l10 10M17 8v9H8"/></svg>
                         </a>
                     </div>
                 </div>
                 <div class="hero__media">
-                    <img src="assets/Imgen-Hero.png" alt="Perro golden retriever y gato atigrado descansando juntos sobre una alfombra" width="1075" height="1200" loading="eager" fetchpriority="high" decoding="async">
+                    <img src="assets/Imgen-Hero.png" data-i18n-alt="hero.img.alt" alt="Perro golden retriever y gato atigrado descansando juntos sobre una alfombra" width="1075" height="1200" loading="eager" fetchpriority="high" decoding="async">
                 </div>
             </div>
         </section>
@@ -108,49 +114,49 @@
         <!-- ============ 2. CATEGORÍAS ============ -->
         <section class="categories" id="tienda">
             <div class="container">
-                <p class="badge-pill categories__badge">Todo para ellos</p>
-                <h2 class="section-title categories__title">¿Qué necesita tu compañero?</h2>
+                <p class="badge-pill categories__badge" data-i18n="categories.badge">Todo para ellos</p>
+                <h2 class="section-title categories__title" data-i18n="categories.title">¿Qué necesita tu compañero?</h2>
                 <div class="categories__grid">
-                    <a href="#" class="cat-card cat-card--salmon" data-cursor="link">
-                        <img class="cat-card__img cat-card__img--raise" src="assets/paseo.png" alt="Cachorro con arnés listo para pasear" loading="lazy" decoding="async">
+                    <a href="#catalogo" class="cat-card cat-card--salmon" data-cursor="link" data-category-filter="paseo">
+                        <img class="cat-card__img cat-card__img--raise" src="assets/paseo.png" data-i18n-alt="cat.paseo.img" alt="Cachorro con arnés listo para pasear" loading="lazy" decoding="async">
                         <div class="cat-card__footer">
-                            <span class="cat-card__label">Paseo</span>
+                            <span class="cat-card__label" data-i18n="cat.paseo">Paseo</span>
                             <span class="cat-card__arrow" aria-hidden="true">
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
                             </span>
                         </div>
                     </a>
-                    <a href="#" class="cat-card cat-card--blue" data-cursor="link">
-                        <img class="cat-card__img cat-card__img--raise" src="assets/en casa.png" alt="Gato durmiendo en una cama mullida" loading="lazy" decoding="async">
+                    <a href="#catalogo" class="cat-card cat-card--blue" data-cursor="link" data-category-filter="en-casa">
+                        <img class="cat-card__img cat-card__img--raise" src="assets/en casa.png" data-i18n-alt="cat.encasa.img" alt="Gato durmiendo en una cama mullida" loading="lazy" decoding="async">
                         <div class="cat-card__footer">
-                            <span class="cat-card__label">En Casa</span>
+                            <span class="cat-card__label" data-i18n="cat.encasa">En Casa</span>
                             <span class="cat-card__arrow" aria-hidden="true">
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
                             </span>
                         </div>
                     </a>
-                    <a href="#" class="cat-card cat-card--yellow" data-cursor="link">
-                        <img class="cat-card__img" src="assets/juguetes.png" alt="Set de juguetes para mascotas: pulpo, pelota, cuerda y hueso" loading="lazy" decoding="async">
+                    <a href="#catalogo" class="cat-card cat-card--yellow" data-cursor="link" data-category-filter="juguetes">
+                        <img class="cat-card__img" src="assets/juguetes.png" data-i18n-alt="cat.juguetes.img" alt="Set de juguetes para mascotas: pulpo, pelota, cuerda y hueso" loading="lazy" decoding="async">
                         <div class="cat-card__footer">
-                            <span class="cat-card__label">Juguetes</span>
+                            <span class="cat-card__label" data-i18n="cat.juguetes">Juguetes</span>
                             <span class="cat-card__arrow" aria-hidden="true">
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
                             </span>
                         </div>
                     </a>
-                    <a href="#" class="cat-card cat-card--green" data-cursor="link">
-                        <img class="cat-card__img" src="assets/cuidado.png" alt="Set de cuidado: cepillo, peine y cortaúñas" loading="lazy" decoding="async">
+                    <a href="#catalogo" class="cat-card cat-card--green" data-cursor="link" data-category-filter="cuidado">
+                        <img class="cat-card__img" src="assets/cuidado.png" data-i18n-alt="cat.cuidado.img" alt="Set de cuidado: cepillo, peine y cortaúñas" loading="lazy" decoding="async">
                         <div class="cat-card__footer">
-                            <span class="cat-card__label">Cuidado</span>
+                            <span class="cat-card__label" data-i18n="cat.cuidado">Cuidado</span>
                             <span class="cat-card__arrow" aria-hidden="true">
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
                             </span>
                         </div>
                     </a>
-                    <a href="#" class="cat-card cat-card--lilac" data-cursor="link">
-                        <img class="cat-card__img cat-card__img--raise" src="assets/alimentacion.png" alt="Tazón con comida para mascotas" loading="lazy" decoding="async">
+                    <a href="#catalogo" class="cat-card cat-card--lilac" data-cursor="link" data-category-filter="alimentacion">
+                        <img class="cat-card__img cat-card__img--raise" src="assets/alimentacion.png" data-i18n-alt="cat.alimentacion.img" alt="Tazón con comida para mascotas" loading="lazy" decoding="async">
                         <div class="cat-card__footer">
-                            <span class="cat-card__label">Alimentación</span>
+                            <span class="cat-card__label" data-i18n="cat.alimentacion">Alimentación</span>
                             <span class="cat-card__arrow" aria-hidden="true">
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
                             </span>
@@ -166,13 +172,13 @@
             <div class="container catalog-teaser__inner">
                 <p class="badge-pill badge-pill--wine catalog-teaser__badge">
                     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l1-5h16l1 5"/><path d="M3 9a2 2 0 0 0 4 0 2 2 0 0 0 4 0 2 2 0 0 0 4 0 2 2 0 0 0 4 0"/><path d="M4 9v10h16V9"/><path d="M9 21v-6h6v6"/></svg>
-                    La tienda
+                    <span data-i18n="teaser.badge">La tienda</span>
                 </p>
                 <h2 class="catalog-teaser__title">
-                    Pequeñas cosas para
-                    <span class="catalog-teaser__title-line">grandes compañeros</span>
+                    <span data-i18n="teaser.title1">Pequeñas cosas para</span>
+                    <span class="catalog-teaser__title-line" data-i18n="teaser.title2">grandes compañeros</span>
                 </h2>
-                <p class="catalog-teaser__subtitle">Esta es una sección de muestra para imaginar cómo se verá el catálogo</p>
+                <p class="catalog-teaser__subtitle" data-i18n="teaser.subtitle">Esta es una sección de muestra para imaginar cómo se verá el catálogo</p>
             </div>
         </section>
 
@@ -182,39 +188,40 @@
                 <aside class="shop__sidebar">
                     <div class="shop__search" role="search">
                         <svg class="shop__search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-                        <label for="shopSearch" class="sr-only">Buscar producto</label>
-                        <input type="search" id="shopSearch" name="buscar" placeholder="Buscar producto">
+                        <label for="shopSearch" class="sr-only" data-i18n="shop.search.sr">Buscar producto</label>
+                        <input type="search" id="shopSearch" name="buscar" data-i18n-placeholder="shop.search.placeholder" placeholder="Buscar producto">
                     </div>
 
                     <div class="shop__filter-group">
-                        <h3 class="shop__filter-title">Categorías</h3>
-                        <label class="shop__checkbox"><input type="checkbox" name="categoria" value="paseo"> Paseo</label>
-                        <label class="shop__checkbox"><input type="checkbox" name="categoria" value="en-casa"> En casa</label>
-                        <label class="shop__checkbox"><input type="checkbox" name="categoria" value="juguetes"> Juguetes</label>
-                        <label class="shop__checkbox"><input type="checkbox" name="categoria" value="cuidado"> Cuidado</label>
-                        <label class="shop__checkbox"><input type="checkbox" name="categoria" value="alimentacion"> Alimentación</label>
+                        <h3 class="shop__filter-title" data-i18n="shop.categories.title">Categorías</h3>
+                        <label class="shop__checkbox"><input type="checkbox" name="categoria" value="paseo"> <span data-i18n="cat.paseo">Paseo</span></label>
+                        <label class="shop__checkbox"><input type="checkbox" name="categoria" value="en-casa"> <span data-i18n="cat.encasa">En casa</span></label>
+                        <label class="shop__checkbox"><input type="checkbox" name="categoria" value="juguetes"> <span data-i18n="cat.juguetes">Juguetes</span></label>
+                        <label class="shop__checkbox"><input type="checkbox" name="categoria" value="cuidado"> <span data-i18n="cat.cuidado">Cuidado</span></label>
+                        <label class="shop__checkbox"><input type="checkbox" name="categoria" value="alimentacion"> <span data-i18n="cat.alimentacion">Alimentación</span></label>
                     </div>
 
                     <div class="shop__filter-group">
-                        <h3 class="shop__filter-title">Para quién</h3>
-                        <label class="shop__checkbox"><input type="checkbox" name="para-quien" value="perros"> Perros</label>
-                        <label class="shop__checkbox"><input type="checkbox" name="para-quien" value="gatos"> Gatos</label>
-                        <label class="shop__checkbox"><input type="checkbox" name="para-quien" value="otros"> Otros</label>
+                        <h3 class="shop__filter-title" data-i18n="shop.forwho.title">Para quién</h3>
+                        <label class="shop__checkbox"><input type="checkbox" name="para-quien" value="perros"> <span data-i18n="filter.perros">Perros</span></label>
+                        <label class="shop__checkbox"><input type="checkbox" name="para-quien" value="gatos"> <span data-i18n="filter.gatos">Gatos</span></label>
+                        <label class="shop__checkbox"><input type="checkbox" name="para-quien" value="otros"> <span data-i18n="filter.otros">Otros</span></label>
                     </div>
 
-                    <label class="shop__checkbox shop__checkbox--standalone"><input type="checkbox" name="ofertas" value="si"> Solo ofertas</label>
+                    <label class="shop__checkbox shop__checkbox--standalone"><input type="checkbox" name="ofertas" value="si"> <span data-i18n="shop.onlyoffers">Solo ofertas</span></label>
 
-                    <button class="btn btn--primary shop__clear" type="button" id="clearFiltersBtn">Limpiar filtros</button>
+                    <button class="btn btn--primary shop__clear" type="button" id="clearFiltersBtn" data-i18n="shop.clearfilters">Limpiar filtros</button>
                 </aside>
 
+                <div class="shop__results">
                 <div class="shop__grid">
-                    <article class="product-card" data-id="pienso" data-name="Pienso 3kg" data-category="Alimentación" data-subtitle="Cuidado digestivo" data-price="22.00" data-image="assets/pienso.png" data-media="product-card__media--lilac">
+                    <article class="product-card" data-id="pienso" data-category-slug="alimentacion" data-name="Pienso 3kg" data-name-ca="Pinso 3kg" data-category="Alimentación" data-category-ca="Alimentació" data-subtitle="Cuidado digestivo" data-subtitle-ca="Cura digestiva" data-price="22.00" data-image="assets/pienso.png" data-media="product-card__media--lilac" data-rating="4.9" data-for="Perros" data-for-ca="Gossos" data-description="Fórmula digestiva con pollo fresco y sin cereales problemáticos, pensada para cuidar la tripa de tu perro en cada comida." data-description-ca="Fórmula digestiva amb pollastre fresc i sense cereals problemàtics, pensada per tenir cura de la panxa del teu gos a cada àpat." data-img-alt="Bolsa de pienso para perros de 3kg" data-img-alt-ca="Bossa de pinso per a gossos de 3kg">
                         <div class="product-card__media product-card__media--lilac">
                             <img src="assets/pienso.png" alt="Bolsa de pienso para perros de 3kg" loading="lazy" decoding="async">
                         </div>
                         <div class="product-card__body">
-                            <p class="product-card__eyebrow">Alimentación</p>
-                            <h3 class="product-card__name">Pienso 3kg</h3>
+                            <p class="product-card__eyebrow" data-field="category">Alimentación</p>
+                            <h3 class="product-card__name" data-field="name">Pienso 3kg</h3>
                             <div class="product-card__footer">
                                 <p class="product-card__price">22,00&nbsp;€</p>
                                 <button class="product-card__add" aria-label="Agregar Pienso 3kg al carrito" data-cursor="link">
@@ -224,14 +231,14 @@
                         </div>
                     </article>
 
-                    <article class="product-card" data-id="champu" data-name="Champú piel sensible" data-category="Cuidado" data-subtitle="Fórmula suave" data-price="7.50" data-image="assets/champu.png" data-media="product-card__media--green">
+                    <article class="product-card" data-id="champu" data-category-slug="cuidado" data-name="Champú piel sensible" data-name-ca="Xampú pell sensible" data-category="Cuidado" data-category-ca="Cura" data-subtitle="Fórmula suave" data-subtitle-ca="Fórmula suau" data-price="7.50" data-image="assets/champu.png" data-media="product-card__media--green" data-rating="4.7" data-for="Perros" data-for-ca="Gossos" data-sale="true" data-description="Champú de fórmula suave con manzanilla y avena, ideal para pieles sensibles. Deja el pelo sedoso y un aroma que dura días." data-description-ca="Xampú de fórmula suau amb camamilla i civada, ideal per a pells sensibles. Deixa el pèl sedós i una olor que dura dies." data-img-alt="Champú para perros Woof &amp; Wash, piel sensible" data-img-alt-ca="Xampú per a gossos Woof &amp; Wash, pell sensible">
                         <div class="product-card__media product-card__media--green">
-                            <span class="product-card__tag">Oferta</span>
+                            <span class="product-card__tag" data-i18n="shop.tag.offer">Oferta</span>
                             <img src="assets/champu.png" alt="Champú para perros Woof & Wash, piel sensible" loading="lazy" decoding="async">
                         </div>
                         <div class="product-card__body">
-                            <p class="product-card__eyebrow">Cuidado</p>
-                            <h3 class="product-card__name">Champú piel sensible</h3>
+                            <p class="product-card__eyebrow" data-field="category">Cuidado</p>
+                            <h3 class="product-card__name" data-field="name">Champú piel sensible</h3>
                             <div class="product-card__footer">
                                 <p class="product-card__price"><span class="product-card__price-old">9,50&nbsp;€</span>7,50&nbsp;€</p>
                                 <button class="product-card__add" aria-label="Agregar Champú piel sensible al carrito" data-cursor="link">
@@ -241,13 +248,13 @@
                         </div>
                     </article>
 
-                    <article class="product-card" data-id="mordedor-nube" data-name="Mordedor nube" data-category="Juguetes" data-subtitle="Superresistente" data-price="9.90" data-image="assets/mordedor.png" data-media="product-card__media--yellow">
+                    <article class="product-card" data-id="mordedor-nube" data-category-slug="juguetes" data-name="Mordedor nube" data-name-ca="Mossegador núvol" data-category="Juguetes" data-category-ca="Joguines" data-subtitle="Superresistente" data-subtitle-ca="Superresistent" data-price="9.90" data-image="assets/mordedor.png" data-media="product-card__media--yellow" data-rating="4.8" data-for="Perros" data-for-ca="Gossos" data-description="Juguete mordedor superresistente que entretiene a tu perro mientras cuida su dentadura. Pensado para morder sin parar." data-description-ca="Joguina mossegadora superresistent que entreté el teu gos mentre té cura de la dentadura. Pensada per mossegar sense parar." data-img-alt="Cachorro golden mordiendo un juguete mordedor" data-img-alt-ca="Cadell golden mossegant una joguina mossegadora">
                         <div class="product-card__media product-card__media--yellow">
                             <img src="assets/mordedor.png" alt="Cachorro golden mordiendo un juguete mordedor" loading="lazy" decoding="async">
                         </div>
                         <div class="product-card__body">
-                            <p class="product-card__eyebrow">Juguetes</p>
-                            <h3 class="product-card__name">Mordedor nube</h3>
+                            <p class="product-card__eyebrow" data-field="category">Juguetes</p>
+                            <h3 class="product-card__name" data-field="name">Mordedor nube</h3>
                             <div class="product-card__footer">
                                 <p class="product-card__price">9,90&nbsp;€</p>
                                 <button class="product-card__add" aria-label="Agregar Mordedor nube al carrito" data-cursor="link">
@@ -257,13 +264,13 @@
                         </div>
                     </article>
 
-                    <article class="product-card" data-id="manta" data-name="Manta suave" data-category="En casa" data-subtitle="Extra abrigo" data-price="12.50" data-image="assets/manta.png" data-media="product-card__media--blue">
+                    <article class="product-card" data-id="manta" data-category-slug="en-casa" data-name="Manta suave" data-name-ca="Manta suau" data-category="En casa" data-category-ca="A Casa" data-subtitle="Extra abrigo" data-subtitle-ca="Abric extra" data-price="12.50" data-image="assets/manta.png" data-media="product-card__media--blue" data-rating="4.8" data-for="Perros y gatos" data-for-ca="Gossos i gats" data-description="Para sofá y transportín. Para que tu compañero descanse a gusto en casa: suave, cómoda y fácil de mantener." data-description-ca="Per al sofà i el transportí. Perquè el teu company descansi a gust a casa: suau, còmoda i fàcil de mantenir." data-img-alt="Manta suave con estampado de huellas" data-img-alt-ca="Manta suau amb estampat de petjades">
                         <div class="product-card__media product-card__media--blue">
                             <img src="assets/manta.png" alt="Manta suave con estampado de huellas" loading="lazy" decoding="async">
                         </div>
                         <div class="product-card__body">
-                            <p class="product-card__eyebrow">En casa</p>
-                            <h3 class="product-card__name">Manta suave</h3>
+                            <p class="product-card__eyebrow" data-field="category">En casa</p>
+                            <h3 class="product-card__name" data-field="name">Manta suave</h3>
                             <div class="product-card__footer">
                                 <p class="product-card__price">12,50&nbsp;€</p>
                                 <button class="product-card__add" aria-label="Agregar Manta suave al carrito" data-cursor="link">
@@ -273,13 +280,13 @@
                         </div>
                     </article>
 
-                    <article class="product-card" data-id="arnes" data-name="Arnés" data-category="Paseo" data-subtitle="Ajuste cómodo" data-price="10.95" data-image="assets/arnes.png" data-media="product-card__media--salmon">
+                    <article class="product-card" data-id="arnes" data-category-slug="paseo" data-name="Arnés" data-name-ca="Arnès" data-category="Paseo" data-category-ca="Passeig" data-subtitle="Ajuste cómodo" data-subtitle-ca="Ajust còmode" data-price="10.95" data-image="assets/arnes.png" data-media="product-card__media--salmon" data-rating="4.6" data-for="Gatos" data-for-ca="Gats" data-description="Arnés ajustable y cómodo para paseos seguros. Ideal para que tu gato explore el exterior sin sobresaltos." data-description-ca="Arnès ajustable i còmode per a passejades segures. Ideal perquè el teu gat explori l'exterior sense ensurts." data-img-alt="Gato paseando con arnés turquesa" data-img-alt-ca="Gat passejant amb arnès turquesa">
                         <div class="product-card__media product-card__media--salmon">
                             <img src="assets/arnes.png" alt="Gato paseando con arnés turquesa" loading="lazy" decoding="async">
                         </div>
                         <div class="product-card__body">
-                            <p class="product-card__eyebrow">Paseo</p>
-                            <h3 class="product-card__name">Arnés</h3>
+                            <p class="product-card__eyebrow" data-field="category">Paseo</p>
+                            <h3 class="product-card__name" data-field="name">Arnés</h3>
                             <div class="product-card__footer">
                                 <p class="product-card__price">10,95&nbsp;€</p>
                                 <button class="product-card__add" aria-label="Agregar Arnés al carrito" data-cursor="link">
@@ -289,13 +296,13 @@
                         </div>
                     </article>
 
-                    <article class="product-card" data-id="balsamo" data-name="Bálsamo para patitas" data-category="Cuidado" data-subtitle="Ingredientes naturales" data-price="11.95" data-image="assets/balsamo.png" data-media="product-card__media--green">
+                    <article class="product-card" data-id="balsamo" data-category-slug="cuidado" data-name="Bálsamo para patitas" data-name-ca="Bàlsam per a potetes" data-category="Cuidado" data-category-ca="Cura" data-subtitle="Ingredientes naturales" data-subtitle-ca="Ingredients naturals" data-price="11.95" data-image="assets/balsamo.png" data-media="product-card__media--green" data-rating="4.9" data-for="Perros y gatos" data-for-ca="Gossos i gats" data-description="Bálsamo natural que protege y repara las patitas, ideal después de paseos largos o sobre superficies calientes." data-description-ca="Bàlsam natural que protegeix i repara les potetes, ideal després de passejades llargues o sobre superfícies calentes." data-img-alt="Bálsamo natural para patitas de mascotas" data-img-alt-ca="Bàlsam natural per a potetes de mascotes">
                         <div class="product-card__media product-card__media--green">
                             <img src="assets/balsamo.png" alt="Bálsamo natural para patitas de mascotas" loading="lazy" decoding="async">
                         </div>
                         <div class="product-card__body">
-                            <p class="product-card__eyebrow">Cuidado</p>
-                            <h3 class="product-card__name">Bálsamo para patitas</h3>
+                            <p class="product-card__eyebrow" data-field="category">Cuidado</p>
+                            <h3 class="product-card__name" data-field="name">Bálsamo para patitas</h3>
                             <div class="product-card__footer">
                                 <p class="product-card__price">11,95&nbsp;€</p>
                                 <button class="product-card__add" aria-label="Agregar Bálsamo para patitas al carrito" data-cursor="link">
@@ -305,34 +312,50 @@
                         </div>
                     </article>
                 </div>
+
+                <div class="shop__empty" id="shopEmpty" hidden>
+                    <p data-i18n="shop.empty.message">No encontramos productos que coincidan con tu búsqueda.</p>
+                    <button type="button" class="link-arrow" id="shopEmptyClear" data-i18n="shop.empty.clear">Limpiar filtros</button>
+                </div>
+
+                <nav class="shop__pagination" id="shopPagination" aria-label="Paginación de productos" hidden>
+                    <button type="button" class="shop__pagination-arrow" id="shopPagePrev" data-i18n-aria="shop.pagination.prev" aria-label="Página anterior">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+                    </button>
+                    <div class="shop__pagination-pages" id="shopPaginationPages"></div>
+                    <button type="button" class="shop__pagination-arrow" id="shopPageNext" data-i18n-aria="shop.pagination.next" aria-label="Página siguiente">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+                    </button>
+                </nav>
+                </div>
             </div>
         </section>
 
         <!-- ============ 5. BENEFICIOS ============ -->
         <section class="benefits">
             <div class="container">
-                <h2 class="section-title benefits__title">Bienestar para todos, <span class="benefits__title-accent">con pelo o sin él</span></h2>
-                <p class="benefits__subtitle">Todo lo que ponemos en la tienda se enfoca en la felicidad de tu compañero.</p>
+                <h2 class="section-title benefits__title"><span data-i18n="benefits.title1">Bienestar para todos,</span> <span class="benefits__title-accent" data-i18n="benefits.title2">con pelo o sin él</span></h2>
+                <p class="benefits__subtitle" data-i18n="benefits.subtitle">Todo lo que ponemos en la tienda se enfoca en la felicidad de tu compañero.</p>
                 <div class="benefits__grid">
                     <article class="benefit-card benefit-card--green">
                         <img class="benefit-card__img" src="assets/naturales.png" alt="Espinaca, tomate, zanahoria y avena" loading="lazy" decoding="async">
                         <div class="benefit-card__text">
-                            <h3>Naturales</h3>
-                            <p>Ingredientes buenos, fáciles de entender.</p>
+                            <h3 data-i18n="benefit1.title">Naturales</h3>
+                            <p data-i18n="benefit1.text">Ingredientes buenos, fáciles de entender.</p>
                         </div>
                     </article>
                     <article class="benefit-card benefit-card--blue">
                         <img class="benefit-card__img" src="assets/sin-granos.png" alt="Tazón con salmón, batata y arvejas" loading="lazy" decoding="async">
                         <div class="benefit-card__text">
-                            <h3>Sin cereales</h3>
-                            <p>Opciones para peludos con la tripa delicada.</p>
+                            <h3 data-i18n="benefit2.title">Sin cereales</h3>
+                            <p data-i18n="benefit2.text">Opciones para peludos con la tripa delicada.</p>
                         </div>
                     </article>
                     <article class="benefit-card benefit-card--salmon">
                         <img class="benefit-card__img" src="assets/hipoalergenicos.png" alt="Pechuga de pollo y filete de pescado" loading="lazy" decoding="async">
                         <div class="benefit-card__text">
-                            <h3>Hipoalergénicos</h3>
-                            <p>Para pieles sensibles y estómagos exigentes.</p>
+                            <h3 data-i18n="benefit3.title">Hipoalergénicos</h3>
+                            <p data-i18n="benefit3.text">Para pieles sensibles y estómagos exigentes.</p>
                         </div>
                     </article>
                 </div>
@@ -349,31 +372,31 @@
                     <div class="about__content">
                         <p class="badge-pill badge-pill--dark about__badge">
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c.3 3.6 1.1 6.1 2.4 7.6C15.7 11 18.2 11.8 22 12c-3.8.2-6.3 1-7.6 2.4C13.1 15.9 12.3 18.4 12 22c-.3-3.6-1.1-6.1-2.4-7.6C8.3 13 5.8 12.2 2 12c3.8-.2 6.3-1 7.6-2.4C10.9 8.1 11.7 5.6 12 2Z"/></svg>
-                            Nuestra forma de hacer
+                            <span data-i18n="about.badge">Nuestra forma de hacer</span>
                         </p>
                         <h2 class="about__title">
-                            Elegimos lo bueno.<br>
-                            <span class="about__title-accent">Ellos ponen la alegría.</span>
+                            <span data-i18n="about.title1">Elegimos lo bueno.</span><br>
+                            <span class="about__title-accent" data-i18n="about.title2">Ellos ponen la alegría.</span>
                         </h2>
-                        <p class="about__text">Nuestro objetivo es el bienestar de los peludos (y no peludos). Buscamos artículos naturales, algunos sin cereales, hipoalergénicos y, sobre todo, buenos.</p>
+                        <p class="about__text" data-i18n="about.text">Nuestro objetivo es el bienestar de los peludos (y no peludos). Buscamos artículos naturales, algunos sin cereales, hipoalergénicos y, sobre todo, buenos.</p>
                         <ul class="about__features">
                             <li>
                                 <span class="about__feature-icon" aria-hidden="true">
                                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10h18"/><path d="M4 10a8 4 0 0 0 16 0"/><path d="M10 16.5h4"/></svg>
                                 </span>
-                                <span class="about__feature-label">Ingredientes que entiendes</span>
+                                <span class="about__feature-label" data-i18n="about.feature1">Ingredientes que entiendes</span>
                             </li>
                             <li>
                                 <span class="about__feature-icon" aria-hidden="true">
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 1 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78Z"/></svg>
                                 </span>
-                                <span class="about__feature-label">Bienestar en cada detalle</span>
+                                <span class="about__feature-label" data-i18n="about.feature2">Bienestar en cada detalle</span>
                             </li>
                             <li>
                                 <span class="about__feature-icon" aria-hidden="true">
                                     <svg width="16" height="16" viewBox="0 0 100 100" fill="currentColor"><circle cx="20" cy="35" r="11"/><circle cx="40" cy="16" r="12"/><circle cx="62" cy="16" r="12"/><circle cx="82" cy="35" r="11"/><ellipse cx="51" cy="64" rx="32" ry="27"/></svg>
                                 </span>
-                                <span class="about__feature-label">Consejo cercano y honesto</span>
+                                <span class="about__feature-label" data-i18n="about.feature3">Consejo cercano y honesto</span>
                             </li>
                         </ul>
                     </div>
@@ -390,8 +413,8 @@
                         <span class="trust__dot trust__dot--2"></span>
                     </div>
                     <div class="trust__content">
-                        <p class="trust__eyebrow">Ven a vernos</p>
-                        <h2 class="trust__title">Tu petshop de confianza,<br><span class="trust__title-accent">muy cerquita.</span></h2>
+                        <p class="trust__eyebrow" data-i18n="trust.eyebrow">Ven a vernos</p>
+                        <h2 class="trust__title"><span data-i18n="trust.title1">Tu petshop de confianza,</span><br><span class="trust__title-accent" data-i18n="trust.title2">muy cerquita.</span></h2>
                     </div>
                     <ul class="trust__info">
                         <li>
@@ -399,7 +422,7 @@
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
                             </span>
                             <div>
-                                <p class="trust__info-title">Lunes a viernes</p>
+                                <p class="trust__info-title" data-i18n="trust.weekday.title">Lunes a viernes</p>
                                 <p class="trust__info-text">9:30–13:00 / 16:30–20:00</p>
                             </div>
                         </li>
@@ -408,7 +431,7 @@
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
                             </span>
                             <div>
-                                <p class="trust__info-title">Sábados</p>
+                                <p class="trust__info-title" data-i18n="trust.saturday.title">Sábados</p>
                                 <p class="trust__info-text">9:30–13:00</p>
                             </div>
                         </li>
@@ -417,11 +440,14 @@
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v9a1 1 0 0 0 1 1h3v-6h6v6h3a1 1 0 0 0 1-1v-9"/></svg>
                             </span>
                             <div>
-                                <p class="trust__info-title">Passeig Sant Cosme</p>
-                                <p class="trust__info-text">Damià 7 · Sils</p>
+                                <p class="trust__info-title" data-i18n="trust.address.title">Passeig Sant Cosme</p>
+                                <p class="trust__info-text" data-i18n="trust.address.text">Damià 7 · Sils</p>
                             </div>
                         </li>
                     </ul>
+                    <div class="trust__map">
+                        <iframe src="https://maps.google.com/maps?q=41.8099569,2.740765(Joma+Animals)&z=16&output=embed" data-i18n-title="trust.map.title" title="Mapa de ubicación de Joma Animals en Sils" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
                 </div>
             </div>
         </section>
@@ -436,73 +462,466 @@
     <div class="cart-view" id="cartView" aria-hidden="true">
         <div class="container cart-view__inner">
             <div class="cart-view__main">
-                <p class="badge-pill cart-view__badge">Casi es tuyo</p>
-                <h1 class="cart-view__title">Tu carrito</h1>
+                <p class="badge-pill cart-view__badge" data-i18n="cart.badge">Casi es tuyo</p>
+                <h1 class="cart-view__title" data-i18n="cart.title">Tu carrito</h1>
                 <p class="cart-view__subtitle" id="cartSubtitle">Tu carrito está vacío.</p>
 
                 <div class="cart-view__list" id="cartList"></div>
-                <p class="cart-view__empty" id="cartEmpty">Todavía no agregaste productos. Explora la tienda y encuentra algo para tu compañero.</p>
+                <p class="cart-view__empty" id="cartEmpty" data-i18n="cart.empty.message">Todavía no agregaste productos. Explora la tienda y encuentra algo para tu compañero.</p>
 
                 <a href="#catalogo" class="cart-view__back" id="cartBack">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-                    Seguir comprando
+                    <span data-i18n="cart.back">Seguir comprando</span>
                 </a>
             </div>
 
             <aside class="cart-view__summary">
                 <div class="cart-view__summary-head">
-                    <h2>Resumen</h2>
+                    <h2 data-i18n="cart.summary.title">Resumen</h2>
                     <span class="cart-view__summary-icon" aria-hidden="true">
                         <svg width="22" height="22" viewBox="0 0 100 100" fill="currentColor"><circle cx="20" cy="35" r="11"/><circle cx="40" cy="16" r="12"/><circle cx="62" cy="16" r="12"/><circle cx="82" cy="35" r="11"/><ellipse cx="51" cy="64" rx="32" ry="27"/></svg>
                     </span>
                 </div>
                 <div class="cart-view__summary-row">
-                    <span>Subtotal</span>
+                    <span data-i18n="cart.subtotal">Subtotal</span>
                     <span id="cartSubtotal">0,00&nbsp;€</span>
                 </div>
                 <div class="cart-view__summary-row">
-                    <span>Envío</span>
-                    <span>Calculado después</span>
+                    <span data-i18n="cart.envio">Envío</span>
+                    <span data-i18n="cart.envio.later">Calculado después</span>
                 </div>
                 <div class="cart-view__summary-divider"></div>
                 <div class="cart-view__summary-row cart-view__summary-row--total">
-                    <span>Total</span>
+                    <span data-i18n="cart.total">Total</span>
                     <span id="cartTotal">0,00&nbsp;€</span>
                 </div>
-                <button type="button" class="btn btn--yellow cart-view__checkout">
-                    Finalizar compra
+                <button type="button" class="btn btn--yellow cart-view__checkout" id="cartCheckoutBtn">
+                    <span data-i18n="cart.checkout">Finalizar compra</span>
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
                 </button>
                 <p class="cart-view__note">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 1 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78Z"/></svg>
-                    Compra segura y preparada con cariño
+                    <span data-i18n="cart.note">Compra segura y preparada con cariño</span>
                 </p>
             </aside>
+        </div>
+    </div>
+
+    <!-- ============ VISTA DE PRODUCTO ============
+         Mismo patrón que la vista del carrito: reemplaza el contenido
+         de <main> (navbar y footer se mantienen visibles) en vez de un
+         overlay. Se abre al hacer clic en cualquier card de producto
+         de la tienda; el contenido se arma con JS a partir de los
+         data-* de esa card (misma fuente que usa el carrito). -->
+    <div class="product-view" id="productView" aria-hidden="true">
+        <div class="container">
+            <a href="#catalogo" class="cart-view__back" id="productBack">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                <span data-i18n="pdp.back">Volver a la tienda</span>
+            </a>
+
+            <div class="product-view__layout">
+                <div class="product-view__media" id="productMedia">
+                    <button type="button" class="product-view__nav product-view__nav--prev" id="productImgPrev" data-i18n-aria="pdp.img.prev" aria-label="Foto anterior">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+                    </button>
+                    <img id="productImage" src="" alt="">
+                    <button type="button" class="product-view__nav product-view__nav--next" id="productImgNext" data-i18n-aria="pdp.img.next" aria-label="Foto siguiente">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+                    </button>
+                </div>
+
+                <div class="product-view__info">
+                    <p class="product-view__eyebrow" id="productEyebrow"></p>
+                    <h1 class="product-view__title" id="productTitle"></h1>
+                    <div class="product-view__rating">
+                        <span class="product-view__stars" id="productStars" aria-hidden="true"></span>
+                        <span id="productRatingValue"></span>
+                    </div>
+                    <p class="product-view__price" id="productPrice"></p>
+                    <p class="product-view__description" id="productDescription"></p>
+
+                    <div class="product-view__qty">
+                        <span class="product-view__qty-label" data-i18n="pdp.qty.label">Cantidad</span>
+                        <div class="product-view__qty-control">
+                            <button type="button" class="product-view__qty-btn" id="productQtyMinus" data-i18n-aria="pdp.qty.minus" aria-label="Quitar una unidad">&minus;</button>
+                            <span id="productQtyValue">1</span>
+                            <button type="button" class="product-view__qty-btn" id="productQtyPlus" data-i18n-aria="pdp.qty.plus" aria-label="Agregar una unidad">+</button>
+                        </div>
+                    </div>
+
+                    <div class="product-view__actions">
+                        <button type="button" class="btn btn--yellow" id="productAddBtn" data-i18n="pdp.add">Añadir al carrito</button>
+                        <button type="button" class="btn btn--outline" id="productBuyBtn" data-i18n="pdp.buy">Comprar ahora</button>
+                    </div>
+
+                    <dl class="product-view__specs">
+                        <div class="product-view__specs-row">
+                            <dt data-i18n="pdp.spec.category">Categoría</dt>
+                            <dd id="productSpecCategory"></dd>
+                        </div>
+                        <div class="product-view__specs-row">
+                            <dt data-i18n="pdp.spec.for">Para</dt>
+                            <dd id="productSpecFor"></dd>
+                        </div>
+                        <div class="product-view__specs-row">
+                            <dt data-i18n="pdp.spec.pickup">Recogida</dt>
+                            <dd data-i18n="pdp.spec.pickup.value">En tienda, Sils</dd>
+                        </div>
+                        <div class="product-view__specs-row">
+                            <dt data-i18n="pdp.spec.shipping">Envío gratis</dt>
+                            <dd data-i18n="pdp.spec.shipping.value">Desde 40&nbsp;€</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+
+        </div>
+
+        <section class="product-view__related">
+            <div class="container">
+                <h2 class="section-title" data-i18n="pdp.related.title">También te puede interesar</h2>
+                <div class="product-view__related-grid" id="relatedGrid"></div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ============ VISTA DE CHECKOUT ============
+         Mismo patrón que carrito/producto: reemplaza <main>, navbar y
+         footer se mantienen visibles. Se abre desde "Finalizar compra"
+         en el carrito. El resumen se arma con el estado real del
+         carrito; al enviar el formulario se muestra una confirmación
+         (no hay pasarela de pago real todavía). -->
+    <div class="checkout-view" id="checkoutView" aria-hidden="true">
+        <div class="container checkout-view__inner">
+            <div class="checkout-view__main">
+                <div class="checkout-steps" id="checkoutSteps">
+                    <span class="checkout-steps__item is-active" data-step="1" data-i18n="checkout.step1">1. Datos</span>
+                    <span class="checkout-steps__item" data-step="2" data-i18n="checkout.step2">2. Pago</span>
+                    <span class="checkout-steps__item" data-step="3" data-i18n="checkout.step3">3. Listo</span>
+                </div>
+
+                <div class="checkout-view__step" id="checkoutStepDatos">
+                <h1 class="checkout-view__title" data-i18n="checkout.datos.title">Tus datos</h1>
+
+                <form id="checkoutForm" novalidate>
+                    <div class="checkout-view__row">
+                        <div class="checkout-view__field">
+                            <label for="coNombre" data-i18n="checkout.nombre">Nombre *</label>
+                            <input type="text" id="coNombre" name="nombre" autocomplete="given-name" required>
+                        </div>
+                        <div class="checkout-view__field">
+                            <label for="coApellidos" data-i18n="checkout.apellidos">Apellidos *</label>
+                            <input type="text" id="coApellidos" name="apellidos" autocomplete="family-name" required>
+                        </div>
+                    </div>
+                    <div class="checkout-view__row">
+                        <div class="checkout-view__field">
+                            <label for="coEmail" data-i18n="checkout.email">Correo electrónico *</label>
+                            <input type="email" id="coEmail" name="email" autocomplete="email" required>
+                        </div>
+                        <div class="checkout-view__field">
+                            <label for="coTelefono" data-i18n="checkout.telefono">Teléfono *</label>
+                            <input type="tel" id="coTelefono" name="telefono" autocomplete="tel" required>
+                        </div>
+                    </div>
+
+                    <h2 class="checkout-view__subtitle" data-i18n="checkout.howreceive">¿Cómo lo recibes?</h2>
+                    <div class="checkout-view__shipping" id="checkoutShippingOptions">
+                        <label class="checkout-view__option is-selected">
+                            <input type="radio" name="entrega" value="domicilio" id="shipDomicilio" checked>
+                            <span class="checkout-view__option-radio" aria-hidden="true"></span>
+                            <span class="checkout-view__option-icon" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17h2.5M14 17H9m5 0V7a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v10h2.5M14 17a2 2 0 1 0 4 0m-4 0a2 2 0 1 1 4 0m0 0h3v-4.34a1 1 0 0 0-.3-.71l-2.69-2.7a1 1 0 0 0-.71-.3H14M5.5 17a2 2 0 1 0 4 0 2 2 0 0 0-4 0Z"/></svg>
+                            </span>
+                            <span class="checkout-view__option-text">
+                                <strong data-i18n="checkout.ship.domicilio.title">Envío a domicilio</strong>
+                                <small data-i18n="checkout.ship.domicilio.text">4,90&nbsp;€ · gratis desde 40&nbsp;€</small>
+                            </span>
+                        </label>
+                        <label class="checkout-view__option">
+                            <input type="radio" name="entrega" value="tienda" id="shipTienda">
+                            <span class="checkout-view__option-radio" aria-hidden="true"></span>
+                            <span class="checkout-view__option-icon" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l1-5h16l1 5"/><path d="M3 9a2 2 0 0 0 4 0 2 2 0 0 0 4 0 2 2 0 0 0 4 0 2 2 0 0 0 4 0"/><path d="M4 9v10h16V9"/><path d="M9 21v-6h6v6"/></svg>
+                            </span>
+                            <span class="checkout-view__option-text">
+                                <strong data-i18n="checkout.ship.tienda.title">Recogida en tienda</strong>
+                                <small data-i18n="checkout.ship.tienda.text">Gratis · Passeig Sant Cosme, Damià 7, Sils</small>
+                            </span>
+                        </label>
+                    </div>
+
+                    <div class="checkout-view__address" id="checkoutAddress">
+                        <div class="checkout-view__field checkout-view__field--full">
+                            <label for="coDireccion" data-i18n="checkout.direccion">Dirección *</label>
+                            <input type="text" id="coDireccion" name="direccion" autocomplete="street-address">
+                        </div>
+                        <div class="checkout-view__row">
+                            <div class="checkout-view__field">
+                                <label for="coCP" data-i18n="checkout.cp">Código postal *</label>
+                                <input type="text" id="coCP" name="cp" autocomplete="postal-code">
+                            </div>
+                            <div class="checkout-view__field">
+                                <label for="coPoblacion" data-i18n="checkout.poblacion">Población *</label>
+                                <input type="text" id="coPoblacion" name="poblacion">
+                            </div>
+                        </div>
+                        <div class="checkout-view__row">
+                            <div class="checkout-view__field">
+                                <label for="coProvincia" data-i18n="checkout.provincia">Provincia</label>
+                                <input type="text" id="coProvincia" name="provincia">
+                            </div>
+                            <div class="checkout-view__field">
+                                <label for="coNotas" data-i18n="checkout.notas">Notas para la entrega</label>
+                                <input type="text" id="coNotas" name="notas">
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn--yellow checkout-view__submit">
+                        <span data-i18n="checkout.continuar">Continuar al pago</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                    </button>
+                </form>
+                </div>
+
+                <div class="checkout-view__step" id="checkoutStepPago" hidden>
+                    <h1 class="checkout-view__title" data-i18n="checkout.pago.title">Pago</h1>
+                    <p class="checkout-view__step-intro" data-i18n="checkout.pago.intro">Elige cómo quieres pagar tu pedido.</p>
+
+                    <div class="checkout-view__shipping" id="checkoutPaymentOptions">
+                        <label class="checkout-view__option is-selected">
+                            <input type="radio" name="pago" value="tarjeta" id="payTarjeta" checked>
+                            <span class="checkout-view__option-radio" aria-hidden="true"></span>
+                            <span class="checkout-view__option-icon" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+                            </span>
+                            <span class="checkout-view__option-text">
+                                <strong data-i18n="checkout.pay.card.title">Tarjeta de crédito o débito</strong>
+                                <small data-i18n="checkout.pay.card.text">Visa, Mastercard</small>
+                            </span>
+                        </label>
+                        <label class="checkout-view__option">
+                            <input type="radio" name="pago" value="transferencia" id="payTransferencia">
+                            <span class="checkout-view__option-radio" aria-hidden="true"></span>
+                            <span class="checkout-view__option-icon" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 10v9M9.5 10v9M14.5 10v9M19 10v9"/><path d="M3 10l9-6 9 6"/></svg>
+                            </span>
+                            <span class="checkout-view__option-text">
+                                <strong data-i18n="checkout.pay.transfer.title">Transferencia bancaria</strong>
+                                <small data-i18n="checkout.pay.transfer.text">Te mandamos los datos por correo</small>
+                            </span>
+                        </label>
+                        <label class="checkout-view__option">
+                            <input type="radio" name="pago" value="reembolso" id="payReembolso">
+                            <span class="checkout-view__option-radio" aria-hidden="true"></span>
+                            <span class="checkout-view__option-icon" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="3"/></svg>
+                            </span>
+                            <span class="checkout-view__option-text">
+                                <strong data-i18n="checkout.pay.cod.title">Contra reembolso</strong>
+                                <small data-i18n="checkout.pay.cod.text">Pagas al recibir tu pedido</small>
+                            </span>
+                        </label>
+                    </div>
+
+                    <div class="checkout-view__step-actions">
+                        <button type="button" class="checkout-view__back-step" id="checkoutBackToDatos">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                            <span data-i18n="checkout.back">Volver</span>
+                        </button>
+                        <button type="button" class="btn btn--yellow checkout-view__submit" id="checkoutConfirmOrderBtn">
+                            <span data-i18n="checkout.confirm">Confirmar pedido</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="checkout-view__step checkout-view__confirm" id="checkoutStepListo" hidden>
+                    <span class="checkout-view__confirm-icon" aria-hidden="true">
+                        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                    </span>
+                    <h2 data-i18n="checkout.thanks.title">¡Gracias por tu pedido!</h2>
+                    <p data-i18n="checkout.thanks.text">Te escribiremos a tu correo con los detalles y el seguimiento del envío.</p>
+                    <a href="#catalogo" class="btn btn--primary" data-i18n="checkout.thanks.continue">Seguir comprando</a>
+                </div>
+            </div>
+
+            <aside class="checkout-view__summary">
+                <h2 data-i18n="checkout.summary.title">Tu pedido</h2>
+                <div class="checkout-view__items" id="checkoutItems"></div>
+                <div class="checkout-view__summary-row">
+                    <span data-i18n="checkout.subtotal">Subtotal</span>
+                    <span id="checkoutSubtotal">0,00&nbsp;€</span>
+                </div>
+                <div class="checkout-view__summary-row">
+                    <span data-i18n="checkout.envio">Envío</span>
+                    <span id="checkoutShippingCost">0,00&nbsp;€</span>
+                </div>
+                <div class="checkout-view__summary-divider"></div>
+                <div class="checkout-view__summary-row checkout-view__summary-row--total">
+                    <span data-i18n="checkout.total">Total</span>
+                    <span id="checkoutTotal">0,00&nbsp;€</span>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- ============ VISTA LEGAL ============
+         Mismo patrón que carrito/producto/checkout: reemplaza <main>,
+         navbar y footer se mantienen visibles. Se abre desde los
+         enlaces "Legal" del footer. Los tres documentos viven en la
+         misma vista con pestañas para moverse entre ellos.
+         IMPORTANTE: es una plantilla con la estructura habitual para
+         tiendas online en España — los datos entre [corchetes] son
+         placeholders reales que hay que completar, y conviene que un
+         gestor/abogado la revise antes de publicarla. -->
+    <div class="legal-view" id="legalView" aria-hidden="true">
+        <div class="container container--narrow legal-view__inner">
+            <a href="#home" class="cart-view__back" id="legalBack">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                <span data-i18n="legal.back">Volver al inicio</span>
+            </a>
+
+            <nav class="legal-view__tabs" id="legalTabs" aria-label="Documentos legales">
+                <button type="button" class="legal-view__tab is-active" data-legal="aviso" data-i18n="legal.tab.aviso">Aviso legal</button>
+                <button type="button" class="legal-view__tab" data-legal="privacidad" data-i18n="legal.tab.privacidad">Privacidad</button>
+                <button type="button" class="legal-view__tab" data-legal="condiciones" data-i18n="legal.tab.condiciones">Condiciones de compra</button>
+            </nav>
+
+            <article class="legal-view__doc" id="legalAviso">
+                <p class="badge-pill legal-view__badge" data-i18n="legal.badge">Documento legal</p>
+                <h1 class="legal-view__title" data-i18n="legal.aviso.title">Aviso legal</h1>
+                <p class="legal-view__updated" data-i18n="legal.aviso.updated">Última actualización: [fecha]</p>
+
+                <h2 data-i18n="legal.aviso.s1.title">1. Datos identificativos</h2>
+                <p data-i18n-html="legal.aviso.s1.intro">En cumplimiento del artículo 10 de la Ley 34/2002, de Servicios de la Sociedad de la Información y Comercio Electrónico (LSSI-CE), se informa de que este sitio web, <strong>Joma Animals</strong>, es operado por:</p>
+                <ul>
+                    <li data-i18n="legal.aviso.s1.li1">Razón social: [Razón social de la empresa]</li>
+                    <li data-i18n="legal.aviso.s1.li2">NIF/CIF: [NIF/CIF]</li>
+                    <li data-i18n="legal.aviso.s1.li3">Domicilio: Passeig Sant Cosme, Damià 7, 17410 Sils (Girona)</li>
+                    <li data-i18n="legal.aviso.s1.li4">Correo de contacto: [correo de contacto]</li>
+                    <li data-i18n="legal.aviso.s1.li5">Teléfono: [teléfono de contacto]</li>
+                    <li data-i18n="legal.aviso.s1.li6">Inscripción registral: [datos de inscripción, si aplica]</li>
+                </ul>
+
+                <h2 data-i18n="legal.aviso.s2.title">2. Objeto y ámbito de aplicación</h2>
+                <p data-i18n="legal.aviso.s2.text">Este aviso legal regula el uso del sitio web jomaanimals.[dominio] (en adelante, "el sitio web"), que Joma Animals pone a disposición de los usuarios para informar sobre sus productos y permitir su compra online. El acceso y uso del sitio web atribuye la condición de usuario e implica la aceptación de este aviso legal.</p>
+
+                <h2 data-i18n="legal.aviso.s3.title">3. Condiciones de acceso y uso</h2>
+                <p data-i18n="legal.aviso.s3.text">El usuario se compromete a hacer un uso adecuado y lícito del sitio web, de conformidad con la legislación vigente, la buena fe y el orden público. Queda prohibido el uso del sitio web con fines ilícitos o lesivos, o que de cualquier forma puedan causar perjuicio o impedir el normal funcionamiento del sitio web.</p>
+
+                <h2 data-i18n="legal.aviso.s4.title">4. Propiedad intelectual e industrial</h2>
+                <p data-i18n="legal.aviso.s4.text">Todos los contenidos del sitio web (textos, imágenes, logotipos, diseño, código fuente) son propiedad de Joma Animals o de terceros que han autorizado su uso, y están protegidos por la normativa de propiedad intelectual e industrial. Queda prohibida su reproducción, distribución o comunicación pública sin autorización expresa.</p>
+
+                <h2 data-i18n="legal.aviso.s5.title">5. Exclusión de responsabilidad</h2>
+                <p data-i18n="legal.aviso.s5.text">Joma Animals no se hace responsable de los daños y perjuicios que pudieran derivarse de interferencias, interrupciones, virus informáticos o averías en el sitio web, ni de los contenidos de los sitios web a los que pueda enlazar.</p>
+
+                <h2 data-i18n="legal.aviso.s6.title">6. Legislación aplicable y jurisdicción</h2>
+                <p data-i18n="legal.aviso.s6.text">Este aviso legal se rige por la legislación española. Para cualquier controversia, las partes se someterán a los juzgados y tribunales que correspondan conforme a derecho, sin perjuicio de los derechos que asistan a los consumidores como foro de su propio domicilio.</p>
+            </article>
+
+            <article class="legal-view__doc" id="legalPrivacidad" hidden>
+                <p class="badge-pill legal-view__badge" data-i18n="legal.badge">Documento legal</p>
+                <h1 class="legal-view__title" data-i18n="legal.privacidad.title">Política de privacidad</h1>
+                <p class="legal-view__updated" data-i18n="legal.privacidad.updated">Última actualización: [fecha]</p>
+
+                <h2 data-i18n="legal.privacidad.s1.title">1. Responsable del tratamiento</h2>
+                <ul>
+                    <li data-i18n="legal.privacidad.s1.li1">Responsable: [Razón social de la empresa]</li>
+                    <li data-i18n="legal.privacidad.s1.li2">NIF/CIF: [NIF/CIF]</li>
+                    <li data-i18n="legal.privacidad.s1.li3">Domicilio: Passeig Sant Cosme, Damià 7, 17410 Sils (Girona)</li>
+                    <li data-i18n="legal.privacidad.s1.li4">Correo de contacto para temas de privacidad: [correo de contacto]</li>
+                </ul>
+
+                <h2 data-i18n="legal.privacidad.s2.title">2. Finalidad del tratamiento</h2>
+                <p data-i18n="legal.privacidad.s2.text">En Joma Animals tratamos los datos personales que nos facilitas para: gestionar tu pedido y su envío o recogida en tienda, atender tus consultas, y —solo si nos das tu consentimiento expreso— enviarte comunicaciones comerciales por correo electrónico.</p>
+
+                <h2 data-i18n="legal.privacidad.s3.title">3. Legitimación</h2>
+                <p data-i18n="legal.privacidad.s3.text">La base legal para el tratamiento de tus datos es la ejecución de la relación contractual (procesar y entregar tu pedido) y, en su caso, tu consentimiento explícito para el envío de comunicaciones comerciales.</p>
+
+                <h2 data-i18n="legal.privacidad.s4.title">4. Destinatarios</h2>
+                <p data-i18n="legal.privacidad.s4.text">Tus datos podrán ser comunicados a terceros estrictamente necesarios para prestar el servicio: empresas de transporte y logística, y proveedores de pasarela de pago. No se ceden datos a terceros con fines comerciales ajenos a Joma Animals.</p>
+
+                <h2 data-i18n="legal.privacidad.s5.title">5. Derechos de las personas interesadas</h2>
+                <p data-i18n="legal.privacidad.s5.text">Puedes ejercer tus derechos de acceso, rectificación, supresión, oposición, limitación del tratamiento y portabilidad de tus datos escribiendo a [correo de contacto], adjuntando una copia de tu documento de identidad. También tienes derecho a presentar una reclamación ante la Agencia Española de Protección de Datos (aepd.es) si consideras que el tratamiento no se ajusta a la normativa.</p>
+
+                <h2 data-i18n="legal.privacidad.s6.title">6. Plazo de conservación</h2>
+                <p data-i18n="legal.privacidad.s6.text">Conservamos tus datos mientras exista una relación contractual y, posteriormente, durante los plazos legales de prescripción de responsabilidades (fiscales, contables) que resulten de aplicación.</p>
+
+                <h2 data-i18n="legal.privacidad.s7.title">7. Procedencia de los datos</h2>
+                <p data-i18n="legal.privacidad.s7.text">Los datos que tratamos proceden directamente de ti, a través de los formularios de compra y contacto del sitio web.</p>
+            </article>
+
+            <article class="legal-view__doc" id="legalCondiciones" hidden>
+                <p class="badge-pill legal-view__badge" data-i18n="legal.badge">Documento legal</p>
+                <h1 class="legal-view__title" data-i18n="legal.condiciones.title">Condiciones de compra y devoluciones</h1>
+                <p class="legal-view__updated" data-i18n="legal.condiciones.updated">Última actualización: [fecha]</p>
+
+                <h2 data-i18n="legal.condiciones.s1.title">1. Identificación del vendedor</h2>
+                <p data-i18n="legal.condiciones.s1.text">Las ventas realizadas a través de este sitio web son efectuadas por [Razón social de la empresa], NIF/CIF [NIF/CIF], con domicilio en Passeig Sant Cosme, Damià 7, 17410 Sils (Girona).</p>
+
+                <h2 data-i18n="legal.condiciones.s2.title">2. Proceso de compra</h2>
+                <p data-i18n="legal.condiciones.s2.text">Para realizar un pedido, añade los productos al carrito, revisa tu pedido, introduce tus datos de contacto y entrega, elige la forma de pago y confirma la compra. Recibirás un correo electrónico confirmando los detalles de tu pedido.</p>
+
+                <h2 data-i18n="legal.condiciones.s3.title">3. Precios e impuestos</h2>
+                <p data-i18n="legal.condiciones.s3.text">Todos los precios mostrados en el sitio web incluyen el IVA aplicable. Los gastos de envío, cuando correspondan, se indican de forma separada antes de confirmar el pedido.</p>
+
+                <h2 data-i18n="legal.condiciones.s4.title">4. Forma de pago</h2>
+                <p data-i18n="legal.condiciones.s4.text">[Describir aquí los métodos de pago habilitados cuando se integre la pasarela de pago real: tarjeta de crédito/débito, transferencia bancaria o contra reembolso, según corresponda.]</p>
+
+                <h2 data-i18n="legal.condiciones.s5.title">5. Envío y recogida</h2>
+                <p data-i18n="legal.condiciones.s5.text">Ofrecemos envío a domicilio (4,90&nbsp;€, gratuito a partir de 40&nbsp;€ de compra) y recogida gratuita en nuestra tienda de Sils. Los plazos de entrega estimados son de [X] días laborables para envíos a domicilio.</p>
+
+                <h2 data-i18n="legal.condiciones.s6.title">6. Derecho de desistimiento</h2>
+                <p data-i18n-html="legal.condiciones.s6.text">De acuerdo con el Real Decreto Legislativo 1/2007, dispones de un plazo de <strong>14 días naturales</strong> desde la recepción del pedido para desistir de la compra sin necesidad de justificación. Para ejercer este derecho, contáctanos en [correo de contacto] indicando tu número de pedido. Los productos deben devolverse en su estado y embalaje originales.</p>
+
+                <h2 data-i18n="legal.condiciones.s7.title">7. Procedimiento de devolución</h2>
+                <p data-i18n="legal.condiciones.s7.text">Una vez recibida la solicitud de devolución, te indicaremos cómo hacernos llegar el producto. Los gastos de devolución corren por cuenta del cliente, salvo que el producto esté defectuoso o el envío haya sido un error nuestro. El reembolso se realizará por el mismo método de pago utilizado en la compra, en un plazo máximo de 14 días desde que recibamos el producto devuelto.</p>
+
+                <h2 data-i18n="legal.condiciones.s8.title">8. Garantías</h2>
+                <p data-i18n="legal.condiciones.s8.text">Todos los productos cuentan con la garantía legal de conformidad prevista en la normativa de consumidores. Si recibes un producto defectuoso, contáctanos y lo sustituiremos o repararemos sin coste alguno.</p>
+            </article>
         </div>
     </div>
 
     <!-- ============ FOOTER ============ -->
     <footer class="footer">
         <div class="container footer__inner">
-            <img class="footer__logo" src="assets/Logo-Joma-compacto.png" alt="Joma Animals" width="500" height="287">
+            <div class="footer__brand">
+                <img class="footer__logo" src="assets/Logo-Joma-compacto.png" alt="Joma Animals" width="500" height="287">
+                <a class="footer__social" href="https://www.instagram.com/jomaanimals_sils/?hl=es-la" target="_blank" rel="noopener noreferrer" data-cursor="link" data-i18n-aria="footer.instagram.aria" aria-label="Instagram de Joma Animals">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                </a>
+            </div>
             <nav>
-                <p class="footer__col-title">Explora</p>
+                <p class="footer__col-title" data-i18n="footer.explora">Explora</p>
                 <div class="footer__links">
-                    <a href="#home" data-cursor="link">Inicio</a>
-                    <a href="#catalogo" data-cursor="link">Tienda</a>
+                    <a href="#home" data-cursor="link" data-i18n="nav.inicio">Inicio</a>
+                    <a href="#catalogo" data-cursor="link" data-i18n="nav.tienda">Tienda</a>
                 </div>
             </nav>
             <div>
-                <p class="footer__col-title">Visítanos</p>
+                <p class="footer__col-title" data-i18n="footer.visitanos">Visítanos</p>
                 <address class="footer__address">
                     Passeig Sant Cosme<br>
                     Damia 7 Sils<br>
                     Girona
                 </address>
             </div>
+            <nav>
+                <p class="footer__col-title" data-i18n="footer.legal">Legal</p>
+                <div class="footer__links">
+                    <button type="button" data-cursor="link" data-legal-link="aviso" data-i18n="legal.tab.aviso">Aviso legal</button>
+                    <button type="button" data-cursor="link" data-legal-link="privacidad" data-i18n="legal.tab.privacidad">Privacidad</button>
+                    <button type="button" data-cursor="link" data-legal-link="condiciones" data-i18n="legal.tab.condiciones">Condiciones de compra</button>
+                </div>
+            </nav>
         </div>
     </footer>
 
+    <script src="i18n.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
