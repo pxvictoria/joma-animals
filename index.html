@@ -52,6 +52,11 @@
                     <input type="search" id="navSearch" name="buscar" data-i18n-placeholder="nav.search.placeholder" placeholder="Buscar productos...">
                 </div>
 
+                <!-- TODO: reemplazar 34600000000 por el número real de WhatsApp de la tienda (formato internacional, sin "+" ni espacios) -->
+                <a class="navbar__whatsapp" href="https://wa.me/34600000000" target="_blank" rel="noopener noreferrer" data-cursor="link" data-i18n-aria="nav.whatsapp.aria" aria-label="Escríbenos por WhatsApp">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.74.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.78 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 1.67c2.11 0 4.09.82 5.58 2.31a7.86 7.86 0 0 1 2.31 5.58c0 4.35-3.54 7.9-7.9 7.9a7.9 7.9 0 0 1-4.03-1.1l-.29-.17-3.12.82.83-3.04-.19-.31a7.86 7.86 0 0 1-1.21-4.2c0-4.36 3.55-7.9 7.9-7.9zm-4.3 4.52c-.15 0-.4.06-.61.3-.21.24-.8.78-.8 1.9s.82 2.21.93 2.36c.12.16 1.59 2.56 3.94 3.49 1.95.78 2.35.62 2.77.58.42-.04 1.36-.55 1.55-1.09.19-.54.19-1 .13-1.09-.06-.1-.21-.15-.44-.27-.23-.12-1.36-.67-1.57-.75-.21-.08-.36-.12-.52.12-.15.23-.6.75-.73.9-.13.16-.27.17-.5.06-.23-.12-.97-.36-1.85-1.14-.68-.6-1.14-1.35-1.28-1.58-.13-.23-.01-.35.1-.47.11-.1.23-.27.35-.4.11-.13.15-.23.23-.38.08-.15.04-.29-.02-.4-.06-.12-.52-1.26-.72-1.73-.19-.45-.38-.39-.52-.4-.14-.01-.28-.01-.44-.01z"/></svg>
+                </a>
+
                 <button type="button" class="navbar__cart" data-i18n-aria="nav.cart.aria" aria-label="Abrir carrito" data-cursor="link">
                     <svg class="navbar__cart-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
                     <span class="navbar__cart-label" data-i18n="nav.cart.label">Carrito</span>
@@ -74,6 +79,10 @@
                 <a href="#home" class="navbar__link" data-i18n="nav.inicio">Inicio</a>
                 <a href="#catalogo" class="navbar__link" data-i18n="nav.tienda">Tienda</a>
             </nav>
+            <a class="navbar__whatsapp" href="https://wa.me/34600000000" target="_blank" rel="noopener noreferrer" data-i18n-aria="nav.whatsapp.aria" aria-label="Escríbenos por WhatsApp">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.74.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.78 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 1.67c2.11 0 4.09.82 5.58 2.31a7.86 7.86 0 0 1 2.31 5.58c0 4.35-3.54 7.9-7.9 7.9a7.9 7.9 0 0 1-4.03-1.1l-.29-.17-3.12.82.83-3.04-.19-.31a7.86 7.86 0 0 1-1.21-4.2c0-4.36 3.55-7.9 7.9-7.9zm-4.3 4.52c-.15 0-.4.06-.61.3-.21.24-.8.78-.8 1.9s.82 2.21.93 2.36c.12.16 1.59 2.56 3.94 3.49 1.95.78 2.35.62 2.77.58.42-.04 1.36-.55 1.55-1.09.19-.54.19-1 .13-1.09-.06-.1-.21-.15-.44-.27-.23-.12-1.36-.67-1.57-.75-.21-.08-.36-.12-.52.12-.15.23-.6.75-.73.9-.13.16-.27.17-.5.06-.23-.12-.97-.36-1.85-1.14-.68-.6-1.14-1.35-1.28-1.58-.13-.23-.01-.35.1-.47.11-.1.23-.27.35-.4.11-.13.15-.23.23-.38.08-.15.04-.29-.02-.4-.06-.12-.52-1.26-.72-1.73-.19-.45-.38-.39-.52-.4-.14-.01-.28-.01-.44-.01z"/></svg>
+                <span data-i18n="nav.whatsapp.label">Escríbenos por WhatsApp</span>
+            </a>
             <button type="button" class="navbar__cart" data-i18n-aria="nav.cart.aria" aria-label="Abrir carrito">
                 <svg class="navbar__cart-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
                 <span class="navbar__cart-label" data-i18n="nav.cart.label">Carrito</span>
@@ -95,7 +104,7 @@
                     <h1 class="hero__title"><span data-i18n="hero.title1">Más felices,</span><br><span class="hero__title-accent" data-i18n="hero.title2">más animales.</span></h1>
                     <p class="hero__subtitle" data-i18n="hero.subtitle">Productos naturales, bonitos y buenos para cuidar de quienes llenan tu casa de pelos y alegría.</p>
                     <div class="hero__actions">
-                        <a href="#tienda" class="btn btn--primary" data-cursor="link">
+                        <a href="#catalogo" class="btn btn--primary" data-cursor="link">
                             <span data-i18n="hero.cta.shop">Ver la tienda</span>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
                         </a>
@@ -215,13 +224,14 @@
 
                 <div class="shop__results">
                 <div class="shop__grid">
-                    <article class="product-card" data-id="pienso" data-category-slug="alimentacion" data-name="Pienso 3kg" data-name-ca="Pinso 3kg" data-category="Alimentación" data-category-ca="Alimentació" data-subtitle="Cuidado digestivo" data-subtitle-ca="Cura digestiva" data-price="22.00" data-image="assets/pienso.png" data-media="product-card__media--lilac" data-rating="4.9" data-for="Perros" data-for-ca="Gossos" data-description="Fórmula digestiva con pollo fresco y sin cereales problemáticos, pensada para cuidar la tripa de tu perro en cada comida." data-description-ca="Fórmula digestiva amb pollastre fresc i sense cereals problemàtics, pensada per tenir cura de la panxa del teu gos a cada àpat." data-img-alt="Bolsa de pienso para perros de 3kg" data-img-alt-ca="Bossa de pinso per a gossos de 3kg">
+                    <article class="product-card" data-id="pienso" data-category-slug="alimentacion" data-stock="in" data-name="Pienso 3kg" data-name-ca="Pinso 3kg" data-category="Alimentación" data-category-ca="Alimentació" data-subtitle="Cuidado digestivo" data-subtitle-ca="Cura digestiva" data-price="22.00" data-image="assets/pienso.png" data-media="product-card__media--lilac" data-rating="4.9" data-for="Perros" data-for-ca="Gossos" data-description="Fórmula digestiva con pollo fresco y sin cereales problemáticos, pensada para cuidar la tripa de tu perro en cada comida." data-description-ca="Fórmula digestiva amb pollastre fresc i sense cereals problemàtics, pensada per tenir cura de la panxa del teu gos a cada àpat." data-img-alt="Bolsa de pienso para perros de 3kg" data-img-alt-ca="Bossa de pinso per a gossos de 3kg">
                         <div class="product-card__media product-card__media--lilac">
                             <img src="assets/pienso.png" alt="Bolsa de pienso para perros de 3kg" loading="lazy" decoding="async">
                         </div>
                         <div class="product-card__body">
                             <p class="product-card__eyebrow" data-field="category">Alimentación</p>
                             <h3 class="product-card__name" data-field="name">Pienso 3kg</h3>
+                            <p class="product-card__stock" data-field="stock"></p>
                             <div class="product-card__footer">
                                 <p class="product-card__price">22,00&nbsp;€</p>
                                 <button class="product-card__add" aria-label="Agregar Pienso 3kg al carrito" data-cursor="link">
@@ -231,7 +241,7 @@
                         </div>
                     </article>
 
-                    <article class="product-card" data-id="champu" data-category-slug="cuidado" data-name="Champú piel sensible" data-name-ca="Xampú pell sensible" data-category="Cuidado" data-category-ca="Cura" data-subtitle="Fórmula suave" data-subtitle-ca="Fórmula suau" data-price="7.50" data-image="assets/champu.png" data-media="product-card__media--green" data-rating="4.7" data-for="Perros" data-for-ca="Gossos" data-sale="true" data-description="Champú de fórmula suave con manzanilla y avena, ideal para pieles sensibles. Deja el pelo sedoso y un aroma que dura días." data-description-ca="Xampú de fórmula suau amb camamilla i civada, ideal per a pells sensibles. Deixa el pèl sedós i una olor que dura dies." data-img-alt="Champú para perros Woof &amp; Wash, piel sensible" data-img-alt-ca="Xampú per a gossos Woof &amp; Wash, pell sensible">
+                    <article class="product-card" data-id="champu" data-category-slug="cuidado" data-stock="in" data-name="Champú piel sensible" data-name-ca="Xampú pell sensible" data-category="Cuidado" data-category-ca="Cura" data-subtitle="Fórmula suave" data-subtitle-ca="Fórmula suau" data-price="7.50" data-image="assets/champu.png" data-media="product-card__media--green" data-rating="4.7" data-for="Perros" data-for-ca="Gossos" data-sale="true" data-description="Champú de fórmula suave con manzanilla y avena, ideal para pieles sensibles. Deja el pelo sedoso y un aroma que dura días." data-description-ca="Xampú de fórmula suau amb camamilla i civada, ideal per a pells sensibles. Deixa el pèl sedós i una olor que dura dies." data-img-alt="Champú para perros Woof &amp; Wash, piel sensible" data-img-alt-ca="Xampú per a gossos Woof &amp; Wash, pell sensible">
                         <div class="product-card__media product-card__media--green">
                             <span class="product-card__tag" data-i18n="shop.tag.offer">Oferta</span>
                             <img src="assets/champu.png" alt="Champú para perros Woof & Wash, piel sensible" loading="lazy" decoding="async">
@@ -239,6 +249,7 @@
                         <div class="product-card__body">
                             <p class="product-card__eyebrow" data-field="category">Cuidado</p>
                             <h3 class="product-card__name" data-field="name">Champú piel sensible</h3>
+                            <p class="product-card__stock" data-field="stock"></p>
                             <div class="product-card__footer">
                                 <p class="product-card__price"><span class="product-card__price-old">9,50&nbsp;€</span>7,50&nbsp;€</p>
                                 <button class="product-card__add" aria-label="Agregar Champú piel sensible al carrito" data-cursor="link">
@@ -248,13 +259,14 @@
                         </div>
                     </article>
 
-                    <article class="product-card" data-id="mordedor-nube" data-category-slug="juguetes" data-name="Mordedor nube" data-name-ca="Mossegador núvol" data-category="Juguetes" data-category-ca="Joguines" data-subtitle="Superresistente" data-subtitle-ca="Superresistent" data-price="9.90" data-image="assets/mordedor.png" data-media="product-card__media--yellow" data-rating="4.8" data-for="Perros" data-for-ca="Gossos" data-description="Juguete mordedor superresistente que entretiene a tu perro mientras cuida su dentadura. Pensado para morder sin parar." data-description-ca="Joguina mossegadora superresistent que entreté el teu gos mentre té cura de la dentadura. Pensada per mossegar sense parar." data-img-alt="Cachorro golden mordiendo un juguete mordedor" data-img-alt-ca="Cadell golden mossegant una joguina mossegadora">
+                    <article class="product-card" data-id="mordedor-nube" data-category-slug="juguetes" data-stock="low" data-name="Mordedor nube" data-name-ca="Mossegador núvol" data-category="Juguetes" data-category-ca="Joguines" data-subtitle="Superresistente" data-subtitle-ca="Superresistent" data-price="9.90" data-image="assets/mordedor.png" data-media="product-card__media--yellow" data-rating="4.8" data-for="Perros" data-for-ca="Gossos" data-description="Juguete mordedor superresistente que entretiene a tu perro mientras cuida su dentadura. Pensado para morder sin parar." data-description-ca="Joguina mossegadora superresistent que entreté el teu gos mentre té cura de la dentadura. Pensada per mossegar sense parar." data-img-alt="Cachorro golden mordiendo un juguete mordedor" data-img-alt-ca="Cadell golden mossegant una joguina mossegadora">
                         <div class="product-card__media product-card__media--yellow">
                             <img src="assets/mordedor.png" alt="Cachorro golden mordiendo un juguete mordedor" loading="lazy" decoding="async">
                         </div>
                         <div class="product-card__body">
                             <p class="product-card__eyebrow" data-field="category">Juguetes</p>
                             <h3 class="product-card__name" data-field="name">Mordedor nube</h3>
+                            <p class="product-card__stock" data-field="stock"></p>
                             <div class="product-card__footer">
                                 <p class="product-card__price">9,90&nbsp;€</p>
                                 <button class="product-card__add" aria-label="Agregar Mordedor nube al carrito" data-cursor="link">
@@ -264,13 +276,14 @@
                         </div>
                     </article>
 
-                    <article class="product-card" data-id="manta" data-category-slug="en-casa" data-name="Manta suave" data-name-ca="Manta suau" data-category="En casa" data-category-ca="A Casa" data-subtitle="Extra abrigo" data-subtitle-ca="Abric extra" data-price="12.50" data-image="assets/manta.png" data-media="product-card__media--blue" data-rating="4.8" data-for="Perros y gatos" data-for-ca="Gossos i gats" data-description="Para sofá y transportín. Para que tu compañero descanse a gusto en casa: suave, cómoda y fácil de mantener." data-description-ca="Per al sofà i el transportí. Perquè el teu company descansi a gust a casa: suau, còmoda i fàcil de mantenir." data-img-alt="Manta suave con estampado de huellas" data-img-alt-ca="Manta suau amb estampat de petjades">
+                    <article class="product-card" data-id="manta" data-category-slug="en-casa" data-stock="in" data-name="Manta suave" data-name-ca="Manta suau" data-category="En casa" data-category-ca="A Casa" data-subtitle="Extra abrigo" data-subtitle-ca="Abric extra" data-price="12.50" data-image="assets/manta.png" data-media="product-card__media--blue" data-rating="4.8" data-for="Perros y gatos" data-for-ca="Gossos i gats" data-description="Para sofá y transportín. Para que tu compañero descanse a gusto en casa: suave, cómoda y fácil de mantener." data-description-ca="Per al sofà i el transportí. Perquè el teu company descansi a gust a casa: suau, còmoda i fàcil de mantenir." data-img-alt="Manta suave con estampado de huellas" data-img-alt-ca="Manta suau amb estampat de petjades">
                         <div class="product-card__media product-card__media--blue">
                             <img src="assets/manta.png" alt="Manta suave con estampado de huellas" loading="lazy" decoding="async">
                         </div>
                         <div class="product-card__body">
                             <p class="product-card__eyebrow" data-field="category">En casa</p>
                             <h3 class="product-card__name" data-field="name">Manta suave</h3>
+                            <p class="product-card__stock" data-field="stock"></p>
                             <div class="product-card__footer">
                                 <p class="product-card__price">12,50&nbsp;€</p>
                                 <button class="product-card__add" aria-label="Agregar Manta suave al carrito" data-cursor="link">
@@ -280,13 +293,14 @@
                         </div>
                     </article>
 
-                    <article class="product-card" data-id="arnes" data-category-slug="paseo" data-name="Arnés" data-name-ca="Arnès" data-category="Paseo" data-category-ca="Passeig" data-subtitle="Ajuste cómodo" data-subtitle-ca="Ajust còmode" data-price="10.95" data-image="assets/arnes.png" data-media="product-card__media--salmon" data-rating="4.6" data-for="Gatos" data-for-ca="Gats" data-description="Arnés ajustable y cómodo para paseos seguros. Ideal para que tu gato explore el exterior sin sobresaltos." data-description-ca="Arnès ajustable i còmode per a passejades segures. Ideal perquè el teu gat explori l'exterior sense ensurts." data-img-alt="Gato paseando con arnés turquesa" data-img-alt-ca="Gat passejant amb arnès turquesa">
+                    <article class="product-card" data-id="arnes" data-category-slug="paseo" data-stock="out" data-name="Arnés" data-name-ca="Arnès" data-category="Paseo" data-category-ca="Passeig" data-subtitle="Ajuste cómodo" data-subtitle-ca="Ajust còmode" data-price="10.95" data-image="assets/arnes.png" data-media="product-card__media--salmon" data-rating="4.6" data-for="Gatos" data-for-ca="Gats" data-description="Arnés ajustable y cómodo para paseos seguros. Ideal para que tu gato explore el exterior sin sobresaltos." data-description-ca="Arnès ajustable i còmode per a passejades segures. Ideal perquè el teu gat explori l'exterior sense ensurts." data-img-alt="Gato paseando con arnés turquesa" data-img-alt-ca="Gat passejant amb arnès turquesa">
                         <div class="product-card__media product-card__media--salmon">
                             <img src="assets/arnes.png" alt="Gato paseando con arnés turquesa" loading="lazy" decoding="async">
                         </div>
                         <div class="product-card__body">
                             <p class="product-card__eyebrow" data-field="category">Paseo</p>
                             <h3 class="product-card__name" data-field="name">Arnés</h3>
+                            <p class="product-card__stock" data-field="stock"></p>
                             <div class="product-card__footer">
                                 <p class="product-card__price">10,95&nbsp;€</p>
                                 <button class="product-card__add" aria-label="Agregar Arnés al carrito" data-cursor="link">
@@ -296,13 +310,14 @@
                         </div>
                     </article>
 
-                    <article class="product-card" data-id="balsamo" data-category-slug="cuidado" data-name="Bálsamo para patitas" data-name-ca="Bàlsam per a potetes" data-category="Cuidado" data-category-ca="Cura" data-subtitle="Ingredientes naturales" data-subtitle-ca="Ingredients naturals" data-price="11.95" data-image="assets/balsamo.png" data-media="product-card__media--green" data-rating="4.9" data-for="Perros y gatos" data-for-ca="Gossos i gats" data-description="Bálsamo natural que protege y repara las patitas, ideal después de paseos largos o sobre superficies calientes." data-description-ca="Bàlsam natural que protegeix i repara les potetes, ideal després de passejades llargues o sobre superfícies calentes." data-img-alt="Bálsamo natural para patitas de mascotas" data-img-alt-ca="Bàlsam natural per a potetes de mascotes">
+                    <article class="product-card" data-id="balsamo" data-category-slug="cuidado" data-stock="in" data-name="Bálsamo para patitas" data-name-ca="Bàlsam per a potetes" data-category="Cuidado" data-category-ca="Cura" data-subtitle="Ingredientes naturales" data-subtitle-ca="Ingredients naturals" data-price="11.95" data-image="assets/balsamo.png" data-media="product-card__media--green" data-rating="4.9" data-for="Perros y gatos" data-for-ca="Gossos i gats" data-description="Bálsamo natural que protege y repara las patitas, ideal después de paseos largos o sobre superficies calientes." data-description-ca="Bàlsam natural que protegeix i repara les potetes, ideal després de passejades llargues o sobre superfícies calentes." data-img-alt="Bálsamo natural para patitas de mascotas" data-img-alt-ca="Bàlsam natural per a potetes de mascotes">
                         <div class="product-card__media product-card__media--green">
                             <img src="assets/balsamo.png" alt="Bálsamo natural para patitas de mascotas" loading="lazy" decoding="async">
                         </div>
                         <div class="product-card__body">
                             <p class="product-card__eyebrow" data-field="category">Cuidado</p>
                             <h3 class="product-card__name" data-field="name">Bálsamo para patitas</h3>
+                            <p class="product-card__stock" data-field="stock"></p>
                             <div class="product-card__footer">
                                 <p class="product-card__price">11,95&nbsp;€</p>
                                 <button class="product-card__add" aria-label="Agregar Bálsamo para patitas al carrito" data-cursor="link">
@@ -539,6 +554,7 @@
                         <span id="productRatingValue"></span>
                     </div>
                     <p class="product-view__price" id="productPrice"></p>
+                    <p class="product-view__stock" id="productStock"></p>
                     <p class="product-view__description" id="productDescription"></p>
 
                     <div class="product-view__qty">

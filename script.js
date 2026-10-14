@@ -357,6 +357,7 @@
     var productStars = document.getElementById('productStars');
     var productRatingValue = document.getElementById('productRatingValue');
     var productPrice = document.getElementById('productPrice');
+    var productStock = document.getElementById('productStock');
     var productDescription = document.getElementById('productDescription');
     var productQtyValueEl = document.getElementById('productQtyValue');
     var productQtyMinus = document.getElementById('productQtyMinus');
@@ -473,8 +474,27 @@
             rating: card.getAttribute('data-rating'),
             forWho: localizedAttr(card, 'for'),
             description: localizedAttr(card, 'description'),
-            imgAlt: localizedAttr(card, 'img-alt')
+            imgAlt: localizedAttr(card, 'img-alt'),
+            stock: card.getAttribute('data-stock') || 'in'
         };
+    }
+
+    /* ---------- Stock ----------
+       'in' (por defecto, sin aviso) | 'low' (pocas unidades) |
+       'out' (agotado: deshabilita los botones de agregar/comprar).
+       baseClass es 'product-card__stock' o 'product-view__stock'. */
+    function renderStockBadge(el, stock, baseClass) {
+        if (!el) return;
+        el.classList.remove(baseClass + '--low', baseClass + '--out');
+        if (stock === 'low') {
+            el.textContent = tr('stock.low');
+            el.classList.add(baseClass + '--low');
+        } else if (stock === 'out') {
+            el.textContent = tr('stock.out');
+            el.classList.add(baseClass + '--out');
+        } else {
+            el.textContent = '';
+        }
     }
 
     /* ---------- Mutaciones del carrito ---------- */
@@ -671,6 +691,10 @@
         el.setAttribute('data-rating', data.rating || '');
         el.setAttribute('data-for', data.forWho || '');
         el.setAttribute('data-description', data.description || '');
+        el.setAttribute('data-stock', data.stock || 'in');
+        var outOfStock = data.stock === 'out';
+        var stockClass = data.stock === 'low' ? ' product-card__stock--low' : (outOfStock ? ' product-card__stock--out' : '');
+        var stockText = data.stock === 'low' ? tr('stock.low') : (outOfStock ? tr('stock.out') : '');
         el.innerHTML =
             '<div class="product-card__media ' + data.media + '">' +
                 '<img src="' + data.image + '" alt="' + (data.imgAlt || data.name) + '" loading="lazy" decoding="async">' +
@@ -678,9 +702,10 @@
             '<div class="product-card__body">' +
                 '<p class="product-card__eyebrow">' + data.category + '</p>' +
                 '<h3 class="product-card__name">' + data.name + '</h3>' +
+                '<p class="product-card__stock' + stockClass + '">' + stockText + '</p>' +
                 '<div class="product-card__footer">' +
                     '<p class="product-card__price">' + formatPrice(parseFloat(data.price) || 0) + '</p>' +
-                    '<button type="button" class="product-card__add" aria-label="' + tr('pdp.add.aria', { name: data.name }) + '">' +
+                    '<button type="button" class="product-card__add" aria-label="' + tr('pdp.add.aria', { name: data.name }) + '"' + (outOfStock ? ' disabled' : '') + '>' +
                         '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>' +
                     '</button>' +
                 '</div>' +
@@ -719,10 +744,20 @@
         if (productStars) productStars.textContent = buildStars(data.rating);
         if (productRatingValue) productRatingValue.textContent = data.rating ? data.rating.replace('.', ',') : '';
         if (productPrice) productPrice.textContent = formatPrice(parseFloat(data.price) || 0);
+        renderStockBadge(productStock, data.stock, 'product-view__stock');
         if (productDescription) productDescription.textContent = data.description || '';
         if (productQtyValueEl) productQtyValueEl.textContent = '1';
         if (productSpecCategory) productSpecCategory.textContent = data.category;
         if (productSpecFor) productSpecFor.textContent = data.forWho || '—';
+
+        var outOfStock = data.stock === 'out';
+        if (productQtyMinus) productQtyMinus.disabled = outOfStock;
+        if (productQtyPlus) productQtyPlus.disabled = outOfStock;
+        if (productAddBtn) {
+            productAddBtn.disabled = outOfStock;
+            productAddBtn.textContent = outOfStock ? tr('pdp.add.outofstock') : tr('pdp.add');
+        }
+        if (productBuyBtn) productBuyBtn.disabled = outOfStock;
 
         if (relatedGrid) {
             relatedGrid.innerHTML = '';
@@ -1004,7 +1039,11 @@
             var img = card.querySelector('.product-card__media img');
             if (img) img.alt = data.imgAlt || data.name;
             var addBtn = card.querySelector('.product-card__add');
-            if (addBtn) addBtn.setAttribute('aria-label', tr('pdp.add.aria', { name: data.name }));
+            if (addBtn) {
+                addBtn.setAttribute('aria-label', tr('pdp.add.aria', { name: data.name }));
+                addBtn.disabled = data.stock === 'out';
+            }
+            renderStockBadge(card.querySelector('[data-field="stock"]'), data.stock, 'product-card__stock');
         }
     }
 
